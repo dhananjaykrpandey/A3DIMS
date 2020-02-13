@@ -127,7 +127,7 @@ namespace A3DIMS
 
         private void RdRibbonBar_Click(object sender, EventArgs e)
         {
-
+            //
         }
 
         private void FrmA3DIMSMainMdi_Load(object sender, EventArgs e)
