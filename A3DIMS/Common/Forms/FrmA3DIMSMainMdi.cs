@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -132,9 +133,23 @@ namespace A3DIMS
         private void FrmA3DIMSMainMdi_Load(object sender, EventArgs e)
         {
             string strValue = "";
-            strValue= ClsCrypto._IClsCrypto.Encrypt("Dhananjay");
-            strValue =ClsCrypto._IClsCrypto.Decrypt(strValue);
+            strValue=A3DLicense.ClsCrypto._IClsCrypto.Encrypt("Dhananjay");
+            strValue = A3DLicense.ClsCrypto._IClsCrypto.Decrypt(strValue);
+            
             MessageBox.Show(strValue);
+            string macAddresses = string.Empty;
+
+            foreach (System.Net.NetworkInformation.NetworkInterface nic in System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces())
+            {
+                if (nic.OperationalStatus == System.Net.NetworkInformation.OperationalStatus.Up)
+                {
+                    macAddresses += nic.GetPhysicalAddress().ToString();
+                    break;
+                }
+            }
+
+            
+           
         }
     }
 }

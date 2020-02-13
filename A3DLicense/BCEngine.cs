@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace A3DIMS.Common.Classes
+namespace A3DLicense
 {
     public class BCEngine
     {

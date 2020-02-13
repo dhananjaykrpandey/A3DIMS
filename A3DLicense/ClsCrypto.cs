@@ -1,19 +1,14 @@
 ﻿using Org.BouncyCastle.Crypto.Engines;
 using Org.BouncyCastle.Crypto.Paddings;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace A3DIMS.Common.Classes
+namespace A3DLicense
 {
-    class ClsCrypto
+    public class ClsCrypto
     { 
         Encoding _encoding;
         IBlockCipherPadding _padding;
-        string key = ConfigurationManager.AppSettings["A3D"];
+        string key = A3DLicense.ArnikaTechnologies.A3DKeyWord;
         private static ClsCrypto _iClsCrypto = null;
         public ClsCrypto()
 
@@ -21,7 +16,8 @@ namespace A3DIMS.Common.Classes
             _encoding = Encoding.ASCII;
             Pkcs7Padding pkcs = new Pkcs7Padding();
             _padding = pkcs;
-             key = ConfigurationManager.AppSettings["A3D"];
+             key = A3DLicense.ArnikaTechnologies.A3DKeyWord;
+
         }
         public static ClsCrypto _IClsCrypto
         {

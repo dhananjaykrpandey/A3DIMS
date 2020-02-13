@@ -91,6 +91,15 @@ namespace A3DIMS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 208F5D45E5BFD36DA6F687DF9C442126.
+        /// </summary>
+        internal static string A3DKeyword {
+            get {
+                return ResourceManager.GetString("A3DKeyword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Add16X16 {

@@ -36,6 +36,9 @@
     <ApplicationIcon>Resources\A3D.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="A3DLicense">
+      <HintPath>..\A3DLicense\bin\Debug\A3DLicense.dll</HintPath>
+    </Reference>
     <Reference Include="A3DSQLServices">
       <HintPath>..\A3DSQLServices\bin\Debug\A3DSQLServices.dll</HintPath>
     </Reference>
@@ -114,8 +117,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\Classes\BCEngine.cs" />
-    <Compile Include="Common\Classes\ClsCrypto.cs" />
     <Compile Include="Common\Classes\ClsMessage.cs" />
     <Compile Include="Common\Classes\ClsProjectSqlQuerys.cs" />
     <Compile Include="Common\Classes\ClsUtility.cs" />
@@ -178,6 +179,9 @@
     <EmbeddedResource Include="ReferenceForms\FrmItemCategory.resx">
       <DependentUpon>FrmItemCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ArnikaTechnologies.arch">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
