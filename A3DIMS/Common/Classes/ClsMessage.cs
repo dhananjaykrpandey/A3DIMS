@@ -23,7 +23,7 @@ namespace A3DIMS.Common.Classes
             
         }
 
-         readonly string   ProjectName ="A3D School Management System";
+         readonly string   ProjectName ="A3D Inventory Management System";
 
         public  void showMessage(string msg, MessageBoxIcon Icon=MessageBoxIcon.Information)
         {

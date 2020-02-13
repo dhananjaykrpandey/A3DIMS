@@ -107,7 +107,7 @@
             this.RdPageViewMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RdPageViewMain.Location = new System.Drawing.Point(0, 25);
             this.RdPageViewMain.Name = "RdPageViewMain";
-            this.RdPageViewMain.SelectedPage = this.RdTbpList;
+            this.RdPageViewMain.SelectedPage = this.RdTbpEntry;
             this.RdPageViewMain.Size = new System.Drawing.Size(800, 425);
             this.RdPageViewMain.TabIndex = 3;
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.RdPageViewMain.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.ItemList;
@@ -380,7 +380,6 @@
             // 
             this.TxtPositionItem.AccessibleName = "Position";
             this.TxtPositionItem.AutoSize = false;
-            this.TxtPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtPositionItem.Name = "TxtPositionItem";
             this.TxtPositionItem.Size = new System.Drawing.Size(50, 23);
             this.TxtPositionItem.Text = "0";

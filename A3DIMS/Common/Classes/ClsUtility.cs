@@ -34,7 +34,80 @@ namespace A3DIMS.Common.Classes
             }
 
         }
+        public bool CheckLicense()
+        {
+            try
+            {
+                bool IsValidLicense = false;
+                string StrLicensePath = "";
+                string StrLicenseText = "";
+                List<string> LstLicense = new List<string>();
+                StrLicensePath = Path.Combine(Application.StartupPath, "A3DLicense.lic");
+                if (!File.Exists(StrLicensePath))
+                {
+                    GClsProjectProperties._IGClsProjectProperties.LIsValidLicense = false;
+                    return IsValidLicense;
+                }
+                else
+                {
+                    StrLicenseText = File.ReadAllText(StrLicensePath);
+                    LstLicense = StrLicenseText.Trim().Split('~').ToList();
+                    if (LstLicense.Count > 0 && (LstLicense[0] != null && string.IsNullOrEmpty(LstLicense[0]) == false && LstLicense[0].Trim() != ""))
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.CSystemAddress = LstLicense[0].Trim();
+                    }
+                    if (LstLicense.Count > 1 && (LstLicense[1] != null && string.IsNullOrEmpty(LstLicense[1]) == false && LstLicense[1].Trim() != ""))
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.dValidityDate = Convert.ToDateTime(LstLicense[1].Trim());
+                    }
 
+
+                    string macAddresses = string.Empty;
+
+                    foreach (System.Net.NetworkInformation.NetworkInterface nic in System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces())
+                    {
+                        if (nic.OperationalStatus == System.Net.NetworkInformation.OperationalStatus.Up)
+                        {
+                            macAddresses += nic.GetPhysicalAddress().ToString();
+                            break;
+                        }
+                    }
+                    if (GClsProjectProperties._IGClsProjectProperties.CSystemAddress == null || string.IsNullOrEmpty(GClsProjectProperties._IGClsProjectProperties.CSystemAddress.Trim()))
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.LIsValidLicense = false;
+                        return IsValidLicense;
+                    }
+                    if (GClsProjectProperties._IGClsProjectProperties.dValidityDate == null)
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.LIsValidLicense = false;
+                        return IsValidLicense;
+                    }
+
+
+                    DateTime dSystemDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                    DateTime dLicenseDate = new DateTime(GClsProjectProperties._IGClsProjectProperties.dValidityDate.Value.Year, GClsProjectProperties._IGClsProjectProperties.dValidityDate.Value.Month, GClsProjectProperties._IGClsProjectProperties.dValidityDate.Value.Day);
+                    if (macAddresses != GClsProjectProperties._IGClsProjectProperties.CSystemAddress)
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.LIsValidLicense = false;
+                        return IsValidLicense;
+                    }
+                    else if (dSystemDate > dLicenseDate)
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.LIsValidLicense = false;
+                        return IsValidLicense;
+                    }
+
+
+                }
+                IsValidLicense = true;
+                return IsValidLicense;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         public Form IsFormAlreadyOpen(Form frm)
         {
             foreach (Form OpenForm in Application.OpenForms)
@@ -363,14 +436,14 @@ namespace A3DIMS.Common.Classes
             return true;
         }
 
-        public bool IsCodeExists(string StrTableName,string StrCodeColumnName,string StrCodeValue, string StrMessage)
+        public bool IsCodeExists(string StrTableName, string StrCodeColumnName, string StrCodeValue, string StrMessage)
         {
             try
             {
                 bool IsCodeExists = false;
                 DataTable DtResult = new DataTable();
                 DtResult = InfSQLServices._IInfSQLServices.InfExecuteDataTable("Select TOP 1 1 From " + StrTableName + " Where " + StrCodeColumnName + "='" + StrCodeValue + "'");
-                if (DtResult.DefaultView.Count>0)
+                if (DtResult.DefaultView.Count > 0)
                 {
                     ClsMessage._IClsMessage.ProjectExceptionMessage(StrMessage);
                     IsCodeExists = true;

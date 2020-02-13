@@ -18,7 +18,6 @@ namespace A3DIMS.Masters
         {
             InitializeComponent();
             BindControls();
-
         }
         private void LoadData()
         {

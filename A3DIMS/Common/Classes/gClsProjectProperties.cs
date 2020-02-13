@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using Telerik.WinControls.UI;
 
@@ -38,5 +39,8 @@ namespace A3DIMS.Common.Classes
         public string CUserName { get; set; } = "Administrator";
         public string CUserType { get; set; } = "Administrator";
         public bool CUserStatus { get; set; } = true;
+        public bool LIsValidLicense { get; set; } = false;
+        public DateTime? dValidityDate { get; set; } = null;
+        public string CSystemAddress { get; set; } = default;
     }
 }

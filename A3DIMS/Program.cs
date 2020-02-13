@@ -1,4 +1,5 @@
-﻿using System;
+﻿using A3DIMS.Common.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,29 @@ namespace A3DIMS
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmA3DIMSMainMdi());
+            try
+            {
+                if (ClsUtility._IClsUtility.CheckLicense() == false)
+                {
+                    A3DLicense.FrmLicense ObjLic = new A3DLicense.FrmLicense();
+                    ObjLic.StartPosition = FormStartPosition.CenterScreen;
+                    ObjLic.ShowDialog();
+                }
+                else
+                {
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new FrmA3DIMSMainMdi());
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
+
+
     }
 }
