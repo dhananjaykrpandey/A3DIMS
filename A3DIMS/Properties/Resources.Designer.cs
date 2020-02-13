@@ -183,6 +183,16 @@ namespace A3DIMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Categories48X48 {
+            get {
+                object obj = ResourceManager.GetObject("Categories48X48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CheckAll16X16 {
             get {
                 object obj = ResourceManager.GetObject("CheckAll16X16", resourceCulture);
@@ -196,6 +206,26 @@ namespace A3DIMS.Properties {
         internal static System.Drawing.Bitmap CheckAll20X20 {
             get {
                 object obj = ResourceManager.GetObject("CheckAll20X20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChildAdd16X16 {
+            get {
+                object obj = ResourceManager.GetObject("ChildAdd16X16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChildAddBlue16X16 {
+            get {
+                object obj = ResourceManager.GetObject("ChildAddBlue16X16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,6 +306,66 @@ namespace A3DIMS.Properties {
         internal static System.Drawing.Bitmap ComponentProperty48X48 {
             get {
                 object obj = ResourceManager.GetObject("ComponentProperty48X48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Copy16X16 {
+            get {
+                object obj = ResourceManager.GetObject("Copy16X16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DataImport24X24 {
+            get {
+                object obj = ResourceManager.GetObject("DataImport24X24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DataImport36X36 {
+            get {
+                object obj = ResourceManager.GetObject("DataImport36X36", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DataImport48X48 {
+            get {
+                object obj = ResourceManager.GetObject("DataImport48X48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DataUpload36X36 {
+            get {
+                object obj = ResourceManager.GetObject("DataUpload36X36", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DataUpload48X48 {
+            get {
+                object obj = ResourceManager.GetObject("DataUpload48X48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -433,9 +523,29 @@ namespace A3DIMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Find16X16 {
+            get {
+                object obj = ResourceManager.GetObject("Find16X16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FindComponent48X48 {
             get {
                 object obj = ResourceManager.GetObject("FindComponent48X48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Invoice48X48 {
+            get {
+                object obj = ResourceManager.GetObject("Invoice48X48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -456,6 +566,26 @@ namespace A3DIMS.Properties {
         internal static System.Drawing.Bitmap ListView25X24 {
             get {
                 object obj = ResourceManager.GetObject("ListView25X24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogBook36X36 {
+            get {
+                object obj = ResourceManager.GetObject("LogBook36X36", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogBook48X48 {
+            get {
+                object obj = ResourceManager.GetObject("LogBook48X48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -543,6 +673,16 @@ namespace A3DIMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Print16X16 {
+            get {
+                object obj = ResourceManager.GetObject("Print16X16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Privous10X16 {
             get {
                 object obj = ResourceManager.GetObject("Privous10X16", resourceCulture);
@@ -563,9 +703,29 @@ namespace A3DIMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ProjectSetup24X24 {
+            get {
+                object obj = ResourceManager.GetObject("ProjectSetup24X24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ProjectSetup48X48 {
             get {
                 object obj = ResourceManager.GetObject("ProjectSetup48X48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Purchase48X48 {
+            get {
+                object obj = ResourceManager.GetObject("Purchase48X48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -586,6 +746,16 @@ namespace A3DIMS.Properties {
         internal static System.Drawing.Bitmap Reports24X24 {
             get {
                 object obj = ResourceManager.GetObject("Reports24X24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sales48X48 {
+            get {
+                object obj = ResourceManager.GetObject("Sales48X48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -636,6 +806,16 @@ namespace A3DIMS.Properties {
         internal static System.Drawing.Bitmap StatusViz48X48 {
             get {
                 object obj = ResourceManager.GetObject("StatusViz48X48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Stock24X24 {
+            get {
+                object obj = ResourceManager.GetObject("Stock24X24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -726,6 +906,16 @@ namespace A3DIMS.Properties {
         internal static System.Drawing.Bitmap UserGroups48X48 {
             get {
                 object obj = ResourceManager.GetObject("UserGroups48X48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Users48X48 {
+            get {
+                object obj = ResourceManager.GetObject("Users48X48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

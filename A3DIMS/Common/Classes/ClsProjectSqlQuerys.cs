@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace A3DSchools.Common.Classes
+namespace A3DIMS.Common.Classes
 {
     class ClsProjectSqlQuerys
     {

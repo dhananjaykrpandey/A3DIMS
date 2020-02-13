@@ -36,15 +36,42 @@
     <ApplicationIcon>Resources\A3D.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="A3DSQLServices">
+      <HintPath>..\A3DSQLServices\bin\Debug\A3DSQLServices.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.94.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.94.2\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.10.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.10.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.8.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.8\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="FastMember, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.1.5.0\lib\net461\FastMember.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.7.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -84,8 +111,11 @@
     <Reference Include="Telerik.WinControls.UI, Version=2016.1.112.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.UI.Design, Version=2016.1.112.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="TelerikCommon, Version=2016.1.112.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Classes\BCEngine.cs" />
+    <Compile Include="Common\Classes\ClsCrypto.cs" />
     <Compile Include="Common\Classes\ClsMessage.cs" />
     <Compile Include="Common\Classes\ClsProjectSqlQuerys.cs" />
     <Compile Include="Common\Classes\ClsUtility.cs" />
@@ -110,6 +140,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferenceForms\FrmClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReferenceForms\FrmClass.designer.cs">
+      <DependentUpon>FrmClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReferenceForms\FrmItemCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReferenceForms\FrmItemCategory.designer.cs">
+      <DependentUpon>FrmItemCategory.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Common\Forms\FrmA3DIMSMainMdi.resx">
       <DependentUpon>FrmA3DIMSMainMdi.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +172,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReferenceForms\FrmClass.resx">
+      <DependentUpon>FrmClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReferenceForms\FrmItemCategory.resx">
+      <DependentUpon>FrmItemCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -375,7 +424,67 @@
     <None Include="Resources\UserGroups48X48.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Administrator\" />
     <Folder Include="Login\" />
+    <Folder Include="Reports\" />
+    <Folder Include="TransactionsForms\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataImport24X24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataImport36X36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataImport48X48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataUpload36X36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataUpload48X48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogBook36X36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogBook48X48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Invoice48X48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categories48X48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users48X48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProjectSetup24X24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stock24X24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sales48X48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Purchase48X48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find16X16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print16X16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChildAdd16X16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy16X16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChildAddBlue16X16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

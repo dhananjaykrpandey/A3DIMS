@@ -15,9 +15,9 @@ using Telerik.WinControls.UI.Docking;
 
 namespace A3DIMS
 {
-    public partial class FrmA3DSMSMainMdi : RadForm
+    public partial class FrmA3DIMSMainMdi : RadForm
     {
-        public FrmA3DSMSMainMdi()
+        public FrmA3DIMSMainMdi()
         {
             InitializeComponent();
             RdDockMain.AutoDetectMdiChildren = true;
@@ -34,6 +34,8 @@ namespace A3DIMS
             RdSpltBtnItemThemeVisualStudio2012Light.Click += BtnThemeMetro_Click;
             // RdSpltBtnItemThemeWindows7.Click += BtnThemeMetro_Click;
             RdSpltBtnItemThemeWindows8.Click += BtnThemeMetro_Click;
+
+            
         }
         public RadForm TryGetFormByName(string frmname)
         {
@@ -125,6 +127,14 @@ namespace A3DIMS
         private void RdRibbonBar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FrmA3DIMSMainMdi_Load(object sender, EventArgs e)
+        {
+            string strValue = "";
+            strValue= ClsCrypto._IClsCrypto.Encrypt("Dhananjay");
+            strValue =ClsCrypto._IClsCrypto.Decrypt(strValue);
+            MessageBox.Show(strValue);
         }
     }
 }

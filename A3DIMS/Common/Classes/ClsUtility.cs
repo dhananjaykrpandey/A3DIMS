@@ -8,9 +8,8 @@ using System.IO;
 using System.Collections.Generic;
 using Telerik.WinControls.UI;
 using System.Reflection;
-using System.Diagnostics;
 using Telerik.WinControls.UI.Docking;
-using A3DIMSSQLServices;
+using A3DSQLServices;
 using System.Data.SqlClient;
 
 namespace A3DIMS.Common.Classes

@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A3DIMS", "A3DIMS\A3DIMS.csproj", "{F0DFDC14-3E4F-47B3-9C72-456974304EFA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{969E1B48-7D09-49A6-9C28-B7674FF60118} = {969E1B48-7D09-49A6-9C28-B7674FF60118}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A3DSQLServices", "A3DSQLServices\A3DSQLServices.csproj", "{969E1B48-7D09-49A6-9C28-B7674FF60118}"
 EndProject
