@@ -19,7 +19,7 @@ namespace A3DIMS
             {
                 if (ClsUtility._IClsUtility.CheckLicense() == false)
                 {
-                    A3DIMS.FrmLicense ObjLic = new A3DIMS.FrmLicense();
+                    A3DLicense.FrmLicense ObjLic = new A3DLicense.FrmLicense();
                     ObjLic.StartPosition = FormStartPosition.CenterScreen;
                     ObjLic.ShowDialog();
                 }

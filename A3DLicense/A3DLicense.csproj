@@ -81,6 +81,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ArnikaTechnologies.resx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +94,7 @@
     <EmbeddedResource Include="ArnikaTechnologies.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ArnikaTechnologies.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLicenseGenrator.resx">
       <DependentUpon>FrmLicenseGenrator.cs</DependentUpon>

@@ -42,7 +42,100 @@ namespace A3DIMS.Common.Classes
                 string StrLicensePath = "";
                 string StrLicenseText = "";
                 List<string> LstLicense = new List<string>();
-                StrLicensePath = Path.Combine(Application.StartupPath, "A3DLicense.lic");
+                StrLicensePath = Path.Combine(Application.StartupPath, "A3DLicense.arlic");
+                if (!File.Exists(StrLicensePath))
+                {
+                    GClsProjectProperties._IGClsProjectProperties.LIsValidLicense = false;
+                    return IsValidLicense;
+                }
+                else
+                {
+                    StrLicenseText = File.ReadAllText(StrLicensePath);
+                    StrLicenseText = A3DLicense.ClsCrypto._IClsCrypto.Decrypt(StrLicenseText);
+                    LstLicense = StrLicenseText.Trim().Split('~').ToList();
+                    if (LstLicense.Count > 0 && (LstLicense[0] != null && string.IsNullOrEmpty(LstLicense[0]) == false && LstLicense[0].Trim() != ""))
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.CName = LstLicense[0].Trim().Replace("Licensed Name :", "");
+                    }
+                    if (LstLicense.Count > 1 && (LstLicense[1] != null && string.IsNullOrEmpty(LstLicense[1]) == false && LstLicense[1].Trim() != ""))
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.CEmail = LstLicense[1].Trim().Replace("Email ID :", "");
+                    }
+                    if (LstLicense.Count > 2 && (LstLicense[2] != null && string.IsNullOrEmpty(LstLicense[2]) == false && LstLicense[2].Trim() != ""))
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.CContactNo1 = LstLicense[2].Trim().Replace("Contact No -1 :", "");
+                    }
+                    if (LstLicense.Count > 3 && (LstLicense[3] != null && string.IsNullOrEmpty(LstLicense[3]) == false && LstLicense[3].Trim() != ""))
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.CContactNo2 = LstLicense[3].Trim().Replace("Contact No -2 :", "");
+                    }
+                    if (LstLicense.Count > 4 && (LstLicense[4] != null && string.IsNullOrEmpty(LstLicense[4]) == false && LstLicense[4].Trim() != ""))
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.CSystemAddress = LstLicense[4].Trim().Replace("System Address :", "");
+                    }
+                    if (LstLicense.Count > 5 && (LstLicense[5] != null && string.IsNullOrEmpty(LstLicense[5]) == false && LstLicense[5].Trim() != ""))
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.dValidityDate = Convert.ToDateTime(LstLicense[5].Trim().Replace("Valid Till :", ""));
+                    }
+                    if (LstLicense.Count > 6 && (LstLicense[6] != null && string.IsNullOrEmpty(LstLicense[6]) == false && LstLicense[6].Trim() != ""))
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.cVersion = LstLicense[6].Trim().Replace("Version :", "");
+                    }
+                    string macAddresses = string.Empty;
+
+                    foreach (System.Net.NetworkInformation.NetworkInterface nic in System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces())
+                    {
+                        if (nic.OperationalStatus == System.Net.NetworkInformation.OperationalStatus.Up)
+                        {
+                            macAddresses += nic.GetPhysicalAddress().ToString();
+                            break;
+                        }
+                    }
+                    if (GClsProjectProperties._IGClsProjectProperties.CSystemAddress == null || string.IsNullOrEmpty(GClsProjectProperties._IGClsProjectProperties.CSystemAddress.Trim()))
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.LIsValidLicense = false;
+                        return IsValidLicense;
+                    }
+                    if (GClsProjectProperties._IGClsProjectProperties.dValidityDate == null)
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.LIsValidLicense = false;
+                        return IsValidLicense;
+                    }
+
+
+                    DateTime dSystemDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                    DateTime dLicenseDate = new DateTime(GClsProjectProperties._IGClsProjectProperties.dValidityDate.Value.Year, GClsProjectProperties._IGClsProjectProperties.dValidityDate.Value.Month, GClsProjectProperties._IGClsProjectProperties.dValidityDate.Value.Day);
+                    if (macAddresses != GClsProjectProperties._IGClsProjectProperties.CSystemAddress)
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.LIsValidLicense = false;
+                        return IsValidLicense;
+                    }
+                    else if (dSystemDate > dLicenseDate)
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.LIsValidLicense = false;
+                        return IsValidLicense;
+                    }
+
+
+                }
+                IsValidLicense = true;
+                return IsValidLicense;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public bool CheckLicensexDLL()
+        {
+            try
+            {
+                bool IsValidLicense = false;
+                string StrLicensePath = "";
+                string StrLicenseText = "";
+                List<string> LstLicense = new List<string>();
+                StrLicensePath = Path.Combine(Application.StartupPath, "micor.xdll");
                 if (!File.Exists(StrLicensePath))
                 {
                     GClsProjectProperties._IGClsProjectProperties.LIsValidLicense = false;
@@ -54,14 +147,32 @@ namespace A3DIMS.Common.Classes
                     LstLicense = StrLicenseText.Trim().Split('~').ToList();
                     if (LstLicense.Count > 0 && (LstLicense[0] != null && string.IsNullOrEmpty(LstLicense[0]) == false && LstLicense[0].Trim() != ""))
                     {
-                        GClsProjectProperties._IGClsProjectProperties.CSystemAddress = LstLicense[0].Trim();
+                        GClsProjectProperties._IGClsProjectProperties.CName = LstLicense[0].Trim().Replace("Licensed Name :", "");
                     }
                     if (LstLicense.Count > 1 && (LstLicense[1] != null && string.IsNullOrEmpty(LstLicense[1]) == false && LstLicense[1].Trim() != ""))
                     {
-                        GClsProjectProperties._IGClsProjectProperties.dValidityDate = Convert.ToDateTime(LstLicense[1].Trim());
+                        GClsProjectProperties._IGClsProjectProperties.CEmail = LstLicense[1].Trim().Replace("Email ID :", "");
                     }
-
-
+                    if (LstLicense.Count > 2 && (LstLicense[2] != null && string.IsNullOrEmpty(LstLicense[2]) == false && LstLicense[2].Trim() != ""))
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.CContactNo1 = LstLicense[2].Trim().Replace("Contact No -1 :", "");
+                    }
+                    if (LstLicense.Count > 3 && (LstLicense[3] != null && string.IsNullOrEmpty(LstLicense[3]) == false && LstLicense[3].Trim() != ""))
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.CContactNo2 = LstLicense[3].Trim().Replace("Contact No -2 :", "");
+                    }
+                    if (LstLicense.Count > 4 && (LstLicense[4] != null && string.IsNullOrEmpty(LstLicense[4]) == false && LstLicense[4].Trim() != ""))
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.CSystemAddress = LstLicense[4].Trim().Replace("System Address :", "");
+                    }
+                    if (LstLicense.Count > 5 && (LstLicense[5] != null && string.IsNullOrEmpty(LstLicense[5]) == false && LstLicense[5].Trim() != ""))
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.dValidityDate = Convert.ToDateTime(LstLicense[5].Trim().Replace("Valid Till :", ""));
+                    }
+                    if (LstLicense.Count > 6 && (LstLicense[6] != null && string.IsNullOrEmpty(LstLicense[6]) == false && LstLicense[6].Trim() != ""))
+                    {
+                        GClsProjectProperties._IGClsProjectProperties.cVersion = LstLicense[6].Trim().Replace("Version :", "");
+                    }
                     string macAddresses = string.Empty;
 
                     foreach (System.Net.NetworkInformation.NetworkInterface nic in System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces())

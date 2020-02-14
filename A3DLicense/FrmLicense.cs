@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
 
-namespace A3DIMS
+namespace A3DLicense
 {
     public partial class FrmLicense : RadForm
     {
@@ -26,7 +26,10 @@ namespace A3DIMS
 
         private void FrmLicense_Load(object sender, EventArgs e)
         {
-
+            if (File.Exists(Path.Combine(Application.StartupPath, "micor.xdll")))
+            {
+                RdBtnTrail.Enabled = false;
+            }
         }
 
         private void RdBtnClose_Click(object sender, EventArgs e)
@@ -164,6 +167,7 @@ namespace A3DIMS
             try
             {
                 if (LValidate() == false) { return; }
+                if(ClsLicenseMessage._IClsLicenseMessage.showQuestionMessage("Are You Sure Want To Continue Trail Version?"+ Environment.NewLine +"Trail Version Valid Only For 30 Days")==DialogResult.No) { return; }
                 string macAddresses = "";
                 string StrLicense = "";
                 foreach (System.Net.NetworkInformation.NetworkInterface nic in System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces())
@@ -174,7 +178,7 @@ namespace A3DIMS
                         break;
                     }
                 }
-                StrLicense = GenrateLicense(RdTxtName.Text.Trim(), RdTxtEmail.Text.Trim(), RdTxtContactNo1.Text.Trim(), RdTxtContactNo2.Text.Trim(), macAddresses.Trim());
+                StrLicense = GenrateLicense(RdTxtName.Text.Trim(), RdTxtEmail.Text.Trim(), RdTxtContactNo1.Text.Trim(), RdTxtContactNo2.Text.Trim(), macAddresses.Trim(),true);
 
                 File.WriteAllText(Path.Combine(Application.StartupPath, "A3DLicense.arlic"), StrLicense);
 
@@ -182,7 +186,7 @@ namespace A3DIMS
                 File.SetCreationTime(Path.Combine(Application.StartupPath, "micor.xdll"), new DateTime(2020, 02, 29));
 
                 ClsLicenseMessage._IClsLicenseMessage.showMessage("Trail License File Generated Successfully!!");
-
+                Application.Restart();
             }
             catch (Exception ex)
             {
@@ -208,6 +212,8 @@ namespace A3DIMS
                         if (File.Exists(Path.Combine(Path.GetDirectoryName(OpnDlg.FileName), "A3DLicense.arlic")))
                         {
                             File.Copy(Path.Combine(Path.GetDirectoryName(OpnDlg.FileName), "A3DLicense.arlic"), Path.Combine(Application.StartupPath, "A3DLicense.arlic"), true);
+                            ClsLicenseMessage._IClsLicenseMessage.showMessage("License File Applied Successful!!!");
+                            Application.Restart();
                         }
 
                         else

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
 
-namespace A3DIMS
+namespace A3DLicense
 {
     public partial class FrmLicenseGenrator : RadForm
     {

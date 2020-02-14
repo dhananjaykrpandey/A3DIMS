@@ -133,8 +133,8 @@ namespace A3DIMS
         private void FrmA3DIMSMainMdi_Load(object sender, EventArgs e)
         {
             string strValue = "";
-            strValue=A3DIMS.ClsCrypto._IClsCrypto.Encrypt("Dhananjay");
-            strValue = A3DIMS.ClsCrypto._IClsCrypto.Decrypt(strValue);
+            strValue= A3DLicense.ClsCrypto._IClsCrypto.Encrypt("Dhananjay");
+            strValue = A3DLicense.ClsCrypto._IClsCrypto.Decrypt(strValue);
             
             MessageBox.Show(strValue);
             string macAddresses = string.Empty;

@@ -1,4 +1,4 @@
-﻿namespace A3DIMS
+﻿namespace A3DLicense
 {
     partial class FrmLicense
     {
@@ -151,7 +151,7 @@
             // RdBtnTrail
             // 
             this.RdBtnTrail.BackColor = System.Drawing.Color.Transparent;
-            this.RdBtnTrail.Image = global::A3DIMS.ArnikaTechnologies.Trail24X24;
+            this.RdBtnTrail.Image = global::A3DLicense.ArnikaTechnologies.Trail24X24;
             this.RdBtnTrail.Location = new System.Drawing.Point(287, 3);
             this.RdBtnTrail.Name = "RdBtnTrail";
             this.RdBtnTrail.Size = new System.Drawing.Size(98, 28);
@@ -164,7 +164,7 @@
             // RdBtnUploadLic
             // 
             this.RdBtnUploadLic.BackColor = System.Drawing.Color.Transparent;
-            this.RdBtnUploadLic.Image = global::A3DIMS.ArnikaTechnologies.PCFFileUpload16X16;
+            this.RdBtnUploadLic.Image = global::A3DLicense.ArnikaTechnologies.PCFFileUpload16X16;
             this.RdBtnUploadLic.Location = new System.Drawing.Point(158, 3);
             this.RdBtnUploadLic.Name = "RdBtnUploadLic";
             this.RdBtnUploadLic.Size = new System.Drawing.Size(123, 28);
@@ -190,7 +190,7 @@
             // RdBtnRegister
             // 
             this.RdBtnRegister.BackColor = System.Drawing.Color.Transparent;
-            this.RdBtnRegister.Image = global::A3DIMS.ArnikaTechnologies.OK16X16;
+            this.RdBtnRegister.Image = global::A3DLicense.ArnikaTechnologies.OK16X16;
             this.RdBtnRegister.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.RdBtnRegister.Location = new System.Drawing.Point(389, 3);
             this.RdBtnRegister.Name = "RdBtnRegister";
@@ -203,7 +203,7 @@
             // RdBtnClose
             // 
             this.RdBtnClose.BackColor = System.Drawing.Color.Transparent;
-            this.RdBtnClose.Image = global::A3DIMS.ArnikaTechnologies.Close16X16;
+            this.RdBtnClose.Image = global::A3DLicense.ArnikaTechnologies.Close16X16;
             this.RdBtnClose.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.RdBtnClose.Location = new System.Drawing.Point(472, 3);
             this.RdBtnClose.Name = "RdBtnClose";

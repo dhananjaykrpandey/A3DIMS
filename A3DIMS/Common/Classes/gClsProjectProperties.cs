@@ -42,5 +42,10 @@ namespace A3DIMS.Common.Classes
         public bool LIsValidLicense { get; set; } = false;
         public DateTime? dValidityDate { get; set; } = null;
         public string CSystemAddress { get; set; } = default;
+        public string CName { get; internal set; }
+        public string CContactNo2 { get; internal set; }
+        public string CContactNo1 { get; internal set; }
+        public string CEmail { get; internal set; }
+        public string cVersion { get; internal set; }
     }
 }

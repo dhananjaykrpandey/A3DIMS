@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace A3DIMS
+namespace A3DLicense
 {
     class ClsLicenseMessage
     {

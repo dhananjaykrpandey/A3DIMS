@@ -8,7 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace A3DIMS {
+namespace A3DLicense
+{
     using System;
     
     
