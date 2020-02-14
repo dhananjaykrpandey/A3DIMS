@@ -211,6 +211,7 @@
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "A3D License System";
             this.Load += new System.EventHandler(this.FrmLicense_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLicense_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RdTxtName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RdTxtEmail)).EndInit();

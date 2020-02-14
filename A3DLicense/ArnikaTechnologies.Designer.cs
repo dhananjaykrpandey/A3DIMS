@@ -82,9 +82,29 @@ namespace A3DLicense {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CartView25X24 {
+            get {
+                object obj = ResourceManager.GetObject("CartView25X24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Close16X16 {
             get {
                 object obj = ResourceManager.GetObject("Close16X16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DataImport24X24 {
+            get {
+                object obj = ResourceManager.GetObject("DataImport24X24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -135,6 +155,16 @@ namespace A3DLicense {
         internal static System.Drawing.Bitmap OK16X16 {
             get {
                 object obj = ResourceManager.GetObject("OK16X16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OpenFolder22X22 {
+            get {
+                object obj = ResourceManager.GetObject("OpenFolder22X22", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

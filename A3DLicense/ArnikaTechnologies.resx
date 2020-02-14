@@ -124,6 +124,18 @@
   <data name="A3DKeyWord" xml:space="preserve">
     <value>208F5D45E5BFD36DA6F687DF9C442126</value>
   </data>
+  <data name="Error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Error.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Close16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Close16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CartView25X24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\CartView25X24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DataImport24X24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\DataImport24X24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="OK16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\OK16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,10 +148,7 @@
   <data name="DownloadFile24X24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\DownloadFile24X24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Close16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Close16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Error" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Error.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="OpenFolder22X22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\OpenFolder22X22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
