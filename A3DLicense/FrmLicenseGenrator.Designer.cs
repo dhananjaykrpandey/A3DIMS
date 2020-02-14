@@ -1,4 +1,4 @@
-﻿namespace A3DLicense
+﻿namespace A3DIMS
 {
     partial class FrmLicenseGenrator
     {
@@ -125,7 +125,7 @@
             this.RdTbpFirst.Controls.Add(this.radLabel4);
             this.RdTbpFirst.Controls.Add(this.RdTxtName);
             this.RdTbpFirst.Controls.Add(this.radLabel1);
-            this.RdTbpFirst.Image = global::A3DLicense.ArnikaTechnologies.CartView25X24;
+            this.RdTbpFirst.Image = global::A3DIMS.ArnikaTechnologies.CartView25X24;
             this.RdTbpFirst.ItemSize = new System.Drawing.SizeF(79F, 36F);
             this.RdTbpFirst.Location = new System.Drawing.Point(10, 45);
             this.RdTbpFirst.Name = "RdTbpFirst";
@@ -221,7 +221,7 @@
             this.RdTbpSecond.Controls.Add(this.radLabel7);
             this.RdTbpSecond.Controls.Add(this.RdTxtReadFileName);
             this.RdTbpSecond.Controls.Add(this.radLabel8);
-            this.RdTbpSecond.Image = global::A3DLicense.ArnikaTechnologies.DataImport24X24;
+            this.RdTbpSecond.Image = global::A3DIMS.ArnikaTechnologies.DataImport24X24;
             this.RdTbpSecond.ItemSize = new System.Drawing.SizeF(110F, 36F);
             this.RdTbpSecond.Location = new System.Drawing.Point(10, 45);
             this.RdTbpSecond.Name = "RdTbpSecond";
@@ -231,7 +231,7 @@
             // RdBtnOpenFile
             // 
             this.RdBtnOpenFile.BackColor = System.Drawing.Color.Transparent;
-            this.RdBtnOpenFile.Image = global::A3DLicense.ArnikaTechnologies.OpenFolder22X22;
+            this.RdBtnOpenFile.Image = global::A3DIMS.ArnikaTechnologies.OpenFolder22X22;
             this.RdBtnOpenFile.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.RdBtnOpenFile.Location = new System.Drawing.Point(427, 8);
             this.RdBtnOpenFile.Name = "RdBtnOpenFile";
@@ -349,7 +349,7 @@
             // 
             this.RdBtnGenrateFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RdBtnGenrateFile.BackColor = System.Drawing.Color.Transparent;
-            this.RdBtnGenrateFile.Image = global::A3DLicense.ArnikaTechnologies.OK16X16;
+            this.RdBtnGenrateFile.Image = global::A3DIMS.ArnikaTechnologies.OK16X16;
             this.RdBtnGenrateFile.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.RdBtnGenrateFile.Location = new System.Drawing.Point(286, 6);
             this.RdBtnGenrateFile.Name = "RdBtnGenrateFile";
@@ -364,7 +364,7 @@
             // 
             this.RdBtnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RdBtnClose.BackColor = System.Drawing.Color.Transparent;
-            this.RdBtnClose.Image = global::A3DLicense.ArnikaTechnologies.Close16X16;
+            this.RdBtnClose.Image = global::A3DIMS.ArnikaTechnologies.Close16X16;
             this.RdBtnClose.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.RdBtnClose.Location = new System.Drawing.Point(388, 6);
             this.RdBtnClose.Name = "RdBtnClose";

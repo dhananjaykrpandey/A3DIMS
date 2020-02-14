@@ -1,4 +1,4 @@
-﻿namespace A3DLicense
+﻿namespace A3DIMS
 {
     partial class FrmLicense
     {
@@ -39,6 +39,8 @@
             this.RdTxtContactNo1 = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
+            this.RdBtnTrail = new Telerik.WinControls.UI.RadButton();
+            this.RdBtnUploadLic = new Telerik.WinControls.UI.RadButton();
             this.RdBtnDownload = new Telerik.WinControls.UI.RadButton();
             this.RdBtnRegister = new Telerik.WinControls.UI.RadButton();
             this.RdBtnClose = new Telerik.WinControls.UI.RadButton();
@@ -53,6 +55,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RdBtnTrail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdBtnUploadLic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RdBtnDownload)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RdBtnRegister)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RdBtnClose)).BeginInit();
@@ -133,35 +137,64 @@
             // 
             // radPanel1
             // 
+            this.radPanel1.Controls.Add(this.RdBtnTrail);
+            this.radPanel1.Controls.Add(this.RdBtnUploadLic);
             this.radPanel1.Controls.Add(this.RdBtnDownload);
             this.radPanel1.Controls.Add(this.RdBtnRegister);
             this.radPanel1.Controls.Add(this.RdBtnClose);
             this.radPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.radPanel1.Location = new System.Drawing.Point(0, 139);
+            this.radPanel1.Location = new System.Drawing.Point(0, 144);
             this.radPanel1.Name = "radPanel1";
-            this.radPanel1.Size = new System.Drawing.Size(441, 39);
+            this.radPanel1.Size = new System.Drawing.Size(553, 34);
             this.radPanel1.TabIndex = 8;
+            // 
+            // RdBtnTrail
+            // 
+            this.RdBtnTrail.BackColor = System.Drawing.Color.Transparent;
+            this.RdBtnTrail.Image = global::A3DIMS.ArnikaTechnologies.Trail24X24;
+            this.RdBtnTrail.Location = new System.Drawing.Point(287, 3);
+            this.RdBtnTrail.Name = "RdBtnTrail";
+            this.RdBtnTrail.Size = new System.Drawing.Size(98, 28);
+            this.RdBtnTrail.TabIndex = 3;
+            this.RdBtnTrail.Text = "&Trial Version";
+            this.RdBtnTrail.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RdBtnTrail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.RdBtnTrail.Click += new System.EventHandler(this.RdBtnTrail_Click);
+            // 
+            // RdBtnUploadLic
+            // 
+            this.RdBtnUploadLic.BackColor = System.Drawing.Color.Transparent;
+            this.RdBtnUploadLic.Image = global::A3DIMS.ArnikaTechnologies.PCFFileUpload16X16;
+            this.RdBtnUploadLic.Location = new System.Drawing.Point(158, 3);
+            this.RdBtnUploadLic.Name = "RdBtnUploadLic";
+            this.RdBtnUploadLic.Size = new System.Drawing.Size(123, 28);
+            this.RdBtnUploadLic.TabIndex = 2;
+            this.RdBtnUploadLic.Text = "&Upload License File";
+            this.RdBtnUploadLic.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RdBtnUploadLic.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.RdBtnUploadLic.Click += new System.EventHandler(this.RdBtnUploadLic_Click);
             // 
             // RdBtnDownload
             // 
             this.RdBtnDownload.BackColor = System.Drawing.Color.Transparent;
             this.RdBtnDownload.Image = ((System.Drawing.Image)(resources.GetObject("RdBtnDownload.Image")));
-            this.RdBtnDownload.Location = new System.Drawing.Point(2, 5);
+            this.RdBtnDownload.Location = new System.Drawing.Point(2, 3);
             this.RdBtnDownload.Name = "RdBtnDownload";
-            this.RdBtnDownload.Size = new System.Drawing.Size(110, 28);
+            this.RdBtnDownload.Size = new System.Drawing.Size(150, 28);
             this.RdBtnDownload.TabIndex = 1;
-            this.RdBtnDownload.Text = "&Download File";
+            this.RdBtnDownload.Text = "&Download Request File";
+            this.RdBtnDownload.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.RdBtnDownload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RdBtnDownload.Click += new System.EventHandler(this.RdBtnDownload_Click);
             // 
             // RdBtnRegister
             // 
             this.RdBtnRegister.BackColor = System.Drawing.Color.Transparent;
-            this.RdBtnRegister.Image = global::A3DLicense.ArnikaTechnologies.OK16X16;
+            this.RdBtnRegister.Image = global::A3DIMS.ArnikaTechnologies.OK16X16;
             this.RdBtnRegister.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.RdBtnRegister.Location = new System.Drawing.Point(236, 5);
+            this.RdBtnRegister.Location = new System.Drawing.Point(389, 3);
             this.RdBtnRegister.Name = "RdBtnRegister";
-            this.RdBtnRegister.Size = new System.Drawing.Size(89, 28);
+            this.RdBtnRegister.Size = new System.Drawing.Size(80, 28);
             this.RdBtnRegister.TabIndex = 1;
             this.RdBtnRegister.Text = "&Register";
             this.RdBtnRegister.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -170,11 +203,11 @@
             // RdBtnClose
             // 
             this.RdBtnClose.BackColor = System.Drawing.Color.Transparent;
-            this.RdBtnClose.Image = global::A3DLicense.ArnikaTechnologies.Close16X16;
+            this.RdBtnClose.Image = global::A3DIMS.ArnikaTechnologies.Close16X16;
             this.RdBtnClose.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.RdBtnClose.Location = new System.Drawing.Point(331, 5);
+            this.RdBtnClose.Location = new System.Drawing.Point(472, 3);
             this.RdBtnClose.Name = "RdBtnClose";
-            this.RdBtnClose.Size = new System.Drawing.Size(89, 28);
+            this.RdBtnClose.Size = new System.Drawing.Size(78, 28);
             this.RdBtnClose.TabIndex = 0;
             this.RdBtnClose.Text = "&Close";
             this.RdBtnClose.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -191,7 +224,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(441, 178);
+            this.ClientSize = new System.Drawing.Size(553, 178);
             this.Controls.Add(this.radPanel1);
             this.Controls.Add(this.RdTxtContactNo2);
             this.Controls.Add(this.RdTxtEmail);
@@ -202,6 +235,7 @@
             this.Controls.Add(this.RdTxtName);
             this.Controls.Add(this.radLabel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLicense";
@@ -222,6 +256,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
             this.radPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.RdBtnTrail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdBtnUploadLic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RdBtnDownload)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RdBtnRegister)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RdBtnClose)).EndInit();
@@ -247,5 +283,7 @@
         private Telerik.WinControls.UI.RadButton RdBtnRegister;
         private Telerik.WinControls.UI.RadButton RdBtnClose;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Telerik.WinControls.UI.RadButton RdBtnTrail;
+        private Telerik.WinControls.UI.RadButton RdBtnUploadLic;
     }
 }

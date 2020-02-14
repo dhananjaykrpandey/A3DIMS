@@ -132,5 +132,11 @@
   <ItemGroup>
     <None Include="Resources\OpenFolder22X22.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PCFFileUpload16X16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trail24X24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

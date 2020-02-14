@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace A3DLicense
+namespace A3DIMS
 {
     class ClsLicenseMessage
     {
@@ -105,6 +107,34 @@ namespace A3DLicense
             }
             catch { return false; } // just dismiss errors but return false
 
+        }
+        public string IsoLated(string StrLic)
+        {
+            IsolatedStorageFile isoStore = IsolatedStorageFile.GetStore(IsolatedStorageScope.User | IsolatedStorageScope.Assembly, null, null);
+            string StrLicCode = "";
+            if (isoStore.FileExists("micor.xdll"))
+            {
+                Console.WriteLine("The file already exists!");
+                using (IsolatedStorageFileStream isoStream = new IsolatedStorageFileStream("micor.xdll", FileMode.Open, isoStore))
+                {
+                    using (StreamReader reader = new StreamReader(isoStream))
+                    {
+                        StrLicCode=(reader.ReadToEnd());
+                    }
+                }
+            }
+            else
+            {
+                using (IsolatedStorageFileStream isoStream = new IsolatedStorageFileStream("micor.xdll", FileMode.CreateNew, isoStore))
+                {
+                    using (StreamWriter writer = new StreamWriter(isoStream))
+                    {
+                        writer.WriteLine(StrLic);
+                        StrLicCode=("You have written to the file.");
+                    }
+                }
+            }
+            return StrLicCode;
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace A3DLicense
+namespace A3DIMS
 {
     public partial class Form1 : Form
     {

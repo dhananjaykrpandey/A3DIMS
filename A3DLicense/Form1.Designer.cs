@@ -1,4 +1,4 @@
-﻿namespace A3DLicense
+﻿namespace A3DIMS
 {
     partial class Form1
     {

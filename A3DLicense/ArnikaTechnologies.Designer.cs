@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace A3DLicense {
+namespace A3DIMS {
     using System;
     
     
@@ -165,6 +165,26 @@ namespace A3DLicense {
         internal static System.Drawing.Bitmap OpenFolder22X22 {
             get {
                 object obj = ResourceManager.GetObject("OpenFolder22X22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PCFFileUpload16X16 {
+            get {
+                object obj = ResourceManager.GetObject("PCFFileUpload16X16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Trail24X24 {
+            get {
+                object obj = ResourceManager.GetObject("Trail24X24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

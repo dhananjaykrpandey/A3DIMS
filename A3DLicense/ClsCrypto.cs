@@ -2,13 +2,13 @@
 using Org.BouncyCastle.Crypto.Paddings;
 using System.Text;
 
-namespace A3DLicense
+namespace A3DIMS
 {
     public class ClsCrypto
     { 
         Encoding _encoding;
         IBlockCipherPadding _padding;
-        string key = A3DLicense.ArnikaTechnologies.A3DKeyWord;
+        string key = A3DIMS.ArnikaTechnologies.A3DKeyWord;
         private static ClsCrypto _iClsCrypto = null;
         public ClsCrypto()
 
@@ -16,7 +16,7 @@ namespace A3DLicense
             _encoding = Encoding.ASCII;
             Pkcs7Padding pkcs = new Pkcs7Padding();
             _padding = pkcs;
-             key = A3DLicense.ArnikaTechnologies.A3DKeyWord;
+             key = A3DIMS.ArnikaTechnologies.A3DKeyWord;
 
         }
         public static ClsCrypto _IClsCrypto

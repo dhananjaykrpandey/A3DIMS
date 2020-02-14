@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
 
-namespace A3DLicense
+namespace A3DIMS
 {
     public partial class FrmLicenseGenrator : RadForm
     {
@@ -41,7 +41,16 @@ namespace A3DLicense
                     OpnDlg.RestoreDirectory = true;
                     if (OpnDlg.ShowDialog() == DialogResult.OK)
                     {
-
+                        string StrLicense = "";
+                        StrLicense = File.ReadAllText(OpnDlg.FileName);
+                        StrLicense = ClsCrypto._IClsCrypto.Decrypt(StrLicense);
+                        List<string> LstLic = new List<string>();
+                        LstLic = StrLicense.Split('~').ToList();
+                        RdTxtReadFileName.Text = LstLic[0].Trim().Replace("Licensed Name :", "");
+                        RdTxtReadFileEmail.Text = LstLic[1].Trim().Replace("Email ID :", "");
+                        RdTxtReadFileContactNo1.Text = LstLic[2].Trim().Replace("Contact No -1 :", "");
+                        RdTxtReadFileContactNo2.Text = LstLic[3].Trim().Replace("Contact No -2 :", "");
+                        RdTxtReadFileSystemAddress.Text = LstLic[4].Trim().Replace("System Address :", "");
                     }
                 }
             }
@@ -141,23 +150,26 @@ namespace A3DLicense
                 switch (TabMain.SelectedPage.Name)
                 {
                     case "RdTbpFirst":
-                        StrLicense = GenrateLicense(RdTxtName.Text.Trim(), RdTxtEmail.Text.Trim(), RdTxtContactNo1.Text.Trim() == "" ? RdTxtContactNo2.Text.Trim() : RdTxtContactNo1.Text.Trim(), RdTxtSystemAddress.Text.Trim(), RdDtpValidTill.Value);
+                        StrLicense = GenrateLicense(RdTxtName.Text.Trim(), RdTxtEmail.Text.Trim(), RdTxtContactNo1.Text.Trim(), RdTxtContactNo2.Text.Trim(), RdTxtSystemAddress.Text.Trim(), RdDtpValidTill.Value);
                         break;
 
                     case "RdTbpSecond":
-                        StrLicense = GenrateLicense(RdTxtReadFileName.Text.Trim(), RdTxtReadFileEmail.Text.Trim(), RdTxtReadFileContactNo1.Text.Trim() == "" ? RdTxtReadFileContactNo2.Text.Trim() : RdTxtReadFileContactNo1.Text.Trim(), RdTxtReadFileSystemAddress.Text.Trim(), RdDtpReadFileValidTill.Value);
+                        StrLicense = GenrateLicense(RdTxtReadFileName.Text.Trim(), RdTxtReadFileEmail.Text.Trim(), RdTxtReadFileContactNo1.Text.Trim(), RdTxtReadFileContactNo2.Text.Trim(), RdTxtReadFileSystemAddress.Text.Trim(), RdDtpReadFileValidTill.Value);
                         break;
                 }
                 using (SaveFileDialog SvDlg = new SaveFileDialog())
                 {
-                    SvDlg.Filter = "Arnika License File(*.arlic)|*.arlic"; ;
+                    SvDlg.Filter = "Arnika License File(*.arlic)|*.arlic"; 
                     SvDlg.Title = "Arnika License Generator";
                     SvDlg.DefaultExt = "*.arlic";
+                    SvDlg.FileName = "A3DLicense.arlic";
                     if (SvDlg.ShowDialog() == DialogResult.OK)
                     {
-                        File.WriteAllText(SvDlg.FileName, StrLicense);
+                        
+                        File.WriteAllText(Path.Combine(Path.GetDirectoryName(SvDlg.FileName), "A3DLicense.arlic"), StrLicense);
                     }
                 }
+                ClsLicenseMessage._IClsLicenseMessage.showMessage("License File Generated Successfully!!");
             }
             catch (Exception ex)
             {
@@ -166,13 +178,13 @@ namespace A3DLicense
             }
         }
 
-        private string GenrateLicense(string StrName, string StrEmail, string StrContactNo, string StrMacAddress, DateTime DValidTill)
+        private string GenrateLicense(string StrName, string StrEmail, string StrContactNo, string StrContactNo2, string StrMacAddress, DateTime DValidTill)
         {
             try
             {
                 string StrLicense = "";
 
-                StrLicense = $"Licensed Name :{StrName}~Email ID :{StrEmail}~Contact No :{StrContactNo}~System Address :{StrMacAddress}~Valid Till :{DValidTill.ToString("yyyy-MMM-dd")}";
+                StrLicense = $"Licensed Name :{StrName}~Email ID :{StrEmail}~Contact No -1 :{StrContactNo}~Contact No -2 :{StrContactNo2}~System Address :{StrMacAddress}~Valid Till :{DValidTill.ToString("yyyy-MMM-dd")}~Version :FULL";
                 StrLicense = ClsCrypto._IClsCrypto.Encrypt(StrLicense);
                 return StrLicense;
             }

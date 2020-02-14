@@ -470,7 +470,7 @@
         private Telerik.WinControls.UI.RadSplitButtonElement RdSplitBtnTheme;
         private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator1;
         private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator2;
-        
+
 
         private Telerik.WinControls.UI.RadMenuItem RdSpltBtnItemThemeDefault;
         private Telerik.WinControls.UI.RadMenuItem RdSpltBtnItemThemeBreeze;
@@ -488,7 +488,7 @@
         private Telerik.WinControls.Themes.TelerikMetroTheme telerikMetroTheme1;
         private Telerik.WinControls.Themes.TelerikMetroBlueTheme telerikMetroBlueTheme1;
         private Telerik.WinControls.Themes.Office2013LightTheme office2013LightTheme1;
-      
+
         private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator3;
         public Telerik.WinControls.UI.RadLabelElement RdLlbDateRange;
         private Telerik.WinControls.UI.RibbonTab RdRbTabReports;
