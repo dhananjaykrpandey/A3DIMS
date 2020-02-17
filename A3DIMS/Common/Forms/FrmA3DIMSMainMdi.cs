@@ -132,21 +132,21 @@ namespace A3DIMS
 
         private void FrmA3DIMSMainMdi_Load(object sender, EventArgs e)
         {
-            string strValue = "";
-            strValue= A3DLicense.ClsCrypto._IClsCrypto.Encrypt("Dhananjay");
-            strValue = A3DLicense.ClsCrypto._IClsCrypto.Decrypt(strValue);
+            //string strValue = "";
+            //strValue= A3DLicense.ClsCrypto._IClsCrypto.Encrypt("Dhananjay");
+            //strValue = A3DLicense.ClsCrypto._IClsCrypto.Decrypt(strValue);
             
-            MessageBox.Show(strValue);
-            string macAddresses = string.Empty;
+            //MessageBox.Show(strValue);
+            //string macAddresses = string.Empty;
 
-            foreach (System.Net.NetworkInformation.NetworkInterface nic in System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces())
-            {
-                if (nic.OperationalStatus == System.Net.NetworkInformation.OperationalStatus.Up)
-                {
-                    macAddresses += nic.GetPhysicalAddress().ToString();
-                    break;
-                }
-            }
+            //foreach (System.Net.NetworkInformation.NetworkInterface nic in System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces())
+            //{
+            //    if (nic.OperationalStatus == System.Net.NetworkInformation.OperationalStatus.Up)
+            //    {
+            //        macAddresses += nic.GetPhysicalAddress().ToString();
+            //        break;
+            //    }
+            //}
 
             
            

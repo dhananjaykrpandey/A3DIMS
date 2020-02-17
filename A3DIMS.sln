@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A3DSQLServices", "A3DSQLSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A3DLicense", "A3DLicense\A3DLicense.csproj", "{8196EAE4-BD6C-4649-A8B1-1C597F2D5B67}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "A3DIMSDataBase", "A3DIMSDataBase\A3DIMSDataBase.sqlproj", "{A4C71937-AAC1-4E6B-905D-49147D1961FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,12 @@ Global
 		{8196EAE4-BD6C-4649-A8B1-1C597F2D5B67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8196EAE4-BD6C-4649-A8B1-1C597F2D5B67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8196EAE4-BD6C-4649-A8B1-1C597F2D5B67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4C71937-AAC1-4E6B-905D-49147D1961FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4C71937-AAC1-4E6B-905D-49147D1961FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4C71937-AAC1-4E6B-905D-49147D1961FE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A4C71937-AAC1-4E6B-905D-49147D1961FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4C71937-AAC1-4E6B-905D-49147D1961FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4C71937-AAC1-4E6B-905D-49147D1961FE}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
