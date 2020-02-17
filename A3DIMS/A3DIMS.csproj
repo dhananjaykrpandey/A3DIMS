@@ -117,10 +117,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Classes\ClsButtonEvents.cs" />
     <Compile Include="Common\Classes\ClsMessage.cs" />
     <Compile Include="Common\Classes\ClsProjectSqlQuerys.cs" />
     <Compile Include="Common\Classes\ClsUtility.cs" />
     <Compile Include="Common\Classes\gClsProjectProperties.cs" />
+    <Compile Include="Common\Classes\IA3DFormSettings.cs" />
     <Compile Include="Common\Forms\FrmA3DIMSMainMdi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +201,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReferenceForms\FrmItems.resx">
       <DependentUpon>FrmItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReferenceForms\FrmSupplier.resx">
+      <DependentUpon>FrmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReferenceForms\FrmUnit.resx">
+      <DependentUpon>FrmUnit.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ArnikaTechnologies.arch">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -20,7 +20,18 @@
             }
 
         }
+        public string FrmUnitSelectQuery(string StrWhereCondtion = "")
+        {
+            string SelectQuery = "";
+            SelectQuery = "SELECT  iId ,cUnitCode ,cUnitDesc ,lUnitStatus ,cUnitRemarks ,cCreatedBy ,dCreatedDate ,cUpdatedBy ,dUpdatedDate FROM A3DIMS.dbo.MUnit";
+            if (StrWhereCondtion != null && StrWhereCondtion != "")
+            {
+                SelectQuery += " Where " + StrWhereCondtion;
+            }
+            SelectQuery += " Order By  cUnitCode";
+            return SelectQuery;
 
+        }
 
         public string FrmItemCategorySelectQuery(string StrWhereCondtion="")
         {

@@ -245,6 +245,7 @@
             this.RdBtnMenuItemUnit.Tag = "FrmUnit";
             this.RdBtnMenuItemUnit.Text = "Item &Unit";
             this.RdBtnMenuItemUnit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.RdBtnMenuItemUnit.Click += new System.EventHandler(this.RdBtnMenuDownloadBhavCopy_Click);
             // 
             // radImageButtonElement9
             // 
