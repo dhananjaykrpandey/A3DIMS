@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace A3DIMS.Common.Classes
+﻿namespace A3DIMS.Common.Classes
 {
     class ClsProjectSqlQuerys
     {
@@ -28,15 +22,15 @@ namespace A3DIMS.Common.Classes
         }
 
 
-        public string FrmAcademicCalanderSelectQuery(string StrWhereCondtion="")
+        public string FrmItemCategorySelectQuery(string StrWhereCondtion="")
         {
             string SelectQuery = "";
-            SelectQuery= "SELECT IID, CAcademicYear, dAcademicYearStart, dAcademicYearEnd, lAcademincYearStatus, cCreatedBy, dCreatedDate, cUpdatedBy, dUpdatedDate FROM[A3DSchool].dbo.MAcademicYear";
+            SelectQuery= "SELECT Id,cItemCategoryCode,cItemCategoryDesc,lItemCategoryStatus,cItemCategoryRemarks,cCreatedBy,dCreatedDate,cUpdatedBy,dUpdatedDate FROM A3DIMS.dbo.MItemCategory";
             if (StrWhereCondtion!=null && StrWhereCondtion!="")
             {
                 SelectQuery += " Where " + StrWhereCondtion;
             }
-            SelectQuery += " Order By  CAcademicYear" ;
+            SelectQuery += " Order By  cItemCategoryCode";
             return SelectQuery;
 
         }

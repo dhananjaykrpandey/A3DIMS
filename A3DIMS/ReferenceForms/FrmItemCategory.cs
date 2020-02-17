@@ -10,9 +10,9 @@ namespace A3DIMS.Masters
 {
     public partial class FrmItemCategory : RadForm
     {
-        BindingSource BsSubject = new BindingSource();
+        BindingSource BsItemCategory = new BindingSource();
         ErrorProvider errorProvider1 = new ErrorProvider();
-        DataTable DtClass = new DataTable();
+        DataTable DtItemCategory = new DataTable();
     
         public FrmItemCategory()
         {
@@ -21,10 +21,10 @@ namespace A3DIMS.Masters
         }
         private void LoadData()
         {
-            DtClass = InfSQLServices._IInfSQLServices.InfExecuteDataTable(ClsProjectSqlQuerys._IClsProjectSqlQuerys.FrmSubjectsSelectQuery());
-            BsSubject.DataSource = DtClass.DefaultView;
-            bindingNavigator1.BindingSource = BsSubject;
-            RdGrdClass.DataSource = BsSubject;
+            DtItemCategory = InfSQLServices._IInfSQLServices.InfExecuteDataTable(ClsProjectSqlQuerys._IClsProjectSqlQuerys.FrmItemCategorySelectQuery());
+            BsItemCategory.DataSource = DtItemCategory.DefaultView;
+            bindingNavigator1.BindingSource = BsItemCategory;
+            RdGrdClass.DataSource = BsItemCategory;
         }
         private void BindControls()
         {
@@ -33,10 +33,10 @@ namespace A3DIMS.Masters
 
                 LoadData();
 
-                RdTxtSubjectCode.DataBindings.Add("Text", BsSubject, "cSubjectCode", false, DataSourceUpdateMode.OnPropertyChanged);
-                RdTxtSubjectDescription.DataBindings.Add(new Binding("Text", this.BsSubject, "cSubjectDescription", true, DataSourceUpdateMode.OnPropertyChanged));
-                RdTxtSubjectRemarks.DataBindings.Add(new Binding("Text", this.BsSubject, "cSubjectRemarks", true, DataSourceUpdateMode.OnPropertyChanged));
-                RdChkClassStatus.DataBindings.Add(new Binding("Checked", this.BsSubject, "lSubjectStatus", true, DataSourceUpdateMode.OnPropertyChanged, false));
+                RdTxtItemCategoryCode.DataBindings.Add("Text", BsItemCategory, "cItemCategoryCode", false, DataSourceUpdateMode.OnPropertyChanged);
+                RdTxtSubjectDescription.DataBindings.Add(new Binding("Text", this.BsItemCategory, "cItemCategoryDesc", true, DataSourceUpdateMode.OnPropertyChanged));
+                RdTxtSubjectRemarks.DataBindings.Add(new Binding("Text", this.BsItemCategory, "cItemCategoryRemarks", true, DataSourceUpdateMode.OnPropertyChanged));
+                RdChkClassStatus.DataBindings.Add(new Binding("Checked", this.BsItemCategory, "lItemCategoryStatus", true, DataSourceUpdateMode.OnPropertyChanged, false));
                 //RdChkAcademicYearStatus.Checked
 
             }
@@ -48,7 +48,7 @@ namespace A3DIMS.Masters
         }
         private void SetEnable(bool lValue)
         {
-            RdTxtSubjectCode.Enabled = lValue;
+            RdTxtItemCategoryCode.Enabled = lValue;
             RdTxtSubjectDescription.Enabled = lValue;
             RdTxtSubjectRemarks.Enabled = lValue;
             RdChkClassStatus.Enabled = lValue;
@@ -78,11 +78,11 @@ namespace A3DIMS.Masters
             {
                 case ClsUtility.enmFormMode.AddMode:
                     SetEnable(true);
-                    RdTxtSubjectCode.Focus();
+                    RdTxtItemCategoryCode.Focus();
                     break;
                 case ClsUtility.enmFormMode.EditMode:
                     SetEnable(true);
-                    RdTxtSubjectCode.Enabled = false;
+                    RdTxtItemCategoryCode.Enabled = false;
                     break;
                 case ClsUtility.enmFormMode.NormalMode:
                     SetEnable(false);
@@ -148,19 +148,19 @@ namespace A3DIMS.Masters
             {
                 errorProvider1.Clear();
                 bool _LValidateSave = true;
-                if (!ClsUtility._IClsUtility.LValidateTextBox(RdTxtSubjectCode, errorProvider1, "Class Code Cannot Be Left Blank."))
+                if (!ClsUtility._IClsUtility.LValidateTextBox(RdTxtItemCategoryCode, errorProvider1, "Item Category Code Cannot Be Left Blank."))
                 {
                     _LValidateSave = false;
                 }
-                else if (!ClsUtility._IClsUtility.LValidateTextBox(RdTxtSubjectDescription, errorProvider1, "Class Description Cannot Be Left Blank."))
+                else if (!ClsUtility._IClsUtility.LValidateTextBox(RdTxtSubjectDescription, errorProvider1, "Item Category Description Cannot Be Left Blank."))
                 {
 
                     _LValidateSave = false;
                 }
-                else if (ClsUtility._IClsUtility.FormMode==ClsUtility.enmFormMode.AddMode &&  ClsUtility._IClsUtility.IsCodeExists("A3DSchool.dbo.MSubject", "cSubjectCode", RdTxtSubjectCode.Text.Trim(), "Subject Code Already Exists!!"))
+                else if (ClsUtility._IClsUtility.FormMode==ClsUtility.enmFormMode.AddMode &&  ClsUtility._IClsUtility.IsCodeExists("A3DIMS.dbo.MItemCategory", "cItemCategoryCode", RdTxtItemCategoryCode.Text.Trim(), "Item Category Code Already Exists!!"))
                 {
-                    errorProvider1.SetError(RdTxtSubjectCode, "Subject Code Already Exists!!");
-                    RdTxtSubjectCode.Focus();
+                    errorProvider1.SetError(RdTxtItemCategoryCode, "Item Category Code Already Exists!!");
+                    RdTxtItemCategoryCode.Focus();
                     _LValidateSave = false;
                 }
                 return _LValidateSave;
@@ -176,10 +176,10 @@ namespace A3DIMS.Masters
         {
             try
             {
-                BsSubject.AllowNew = true;
-                BsSubject.AddNew();
-                BsSubject.MoveLast();
-                CurrencyManager cm = (CurrencyManager)this.BindingContext[BsSubject];
+                BsItemCategory.AllowNew = true;
+                BsItemCategory.AddNew();
+                BsItemCategory.MoveLast();
+                CurrencyManager cm = (CurrencyManager)this.BindingContext[BsItemCategory];
                 cm.Refresh();
 
                 ClsUtility._IClsUtility.FormMode = ClsUtility.enmFormMode.AddMode;
@@ -199,7 +199,7 @@ namespace A3DIMS.Masters
             {
                 ClsUtility._IClsUtility.FormMode = ClsUtility.enmFormMode.EditMode;
                 SetFormMode(ClsUtility.enmFormMode.EditMode);
-                RdTxtSubjectCode.Enabled = false;
+                RdTxtItemCategoryCode.Enabled = false;
 
 
             }
@@ -216,9 +216,9 @@ namespace A3DIMS.Masters
             {
                 if (ClsMessage._IClsMessage.showAskDeleteMessage() == DialogResult.No) { return; }
                 int IRowIndex = 0;
-                IRowIndex = BsSubject.Position;
-                DtClass.DefaultView[IRowIndex].Delete();
-                InfSQLServices._IInfSQLServices.InfUpdateDataAdapter(ClsProjectSqlQuerys._IClsProjectSqlQuerys.FrmSubjectsSelectQuery("1=2"), DtClass);
+                IRowIndex = BsItemCategory.Position;
+                DtItemCategory.DefaultView[IRowIndex].Delete();
+                InfSQLServices._IInfSQLServices.InfUpdateDataAdapter(ClsProjectSqlQuerys._IClsProjectSqlQuerys.FrmItemCategorySelectQuery("1=2"), DtItemCategory);
                 ClsMessage._IClsMessage.showDeleteMessage();
             }
             catch (Exception ex)
@@ -235,20 +235,20 @@ namespace A3DIMS.Masters
                 if (LValidateSave() == false) { return; }
 
                 int IRowIndex = 0;
-                IRowIndex = BsSubject.Position;
-                DtClass.DefaultView[IRowIndex].BeginEdit();
-                DtClass.DefaultView[IRowIndex]["cUpdatedBy"] = GClsProjectProperties._IGClsProjectProperties.CUserID;
-                DtClass.DefaultView[IRowIndex]["dUpdatedDate"] = DateTime.Now;
-                DtClass.DefaultView[IRowIndex]["lSubjectStatus"] = RdChkClassStatus.Checked;
+                IRowIndex = BsItemCategory.Position;
+                DtItemCategory.DefaultView[IRowIndex].BeginEdit();
+                DtItemCategory.DefaultView[IRowIndex]["cUpdatedBy"] = GClsProjectProperties._IGClsProjectProperties.CUserID;
+                DtItemCategory.DefaultView[IRowIndex]["dUpdatedDate"] = DateTime.Now;
+                DtItemCategory.DefaultView[IRowIndex]["lItemCategoryStatus"] = RdChkClassStatus.Checked;
                 if (ClsUtility._IClsUtility.FormMode == ClsUtility.enmFormMode.AddMode)
                 {
-                    DtClass.DefaultView[IRowIndex]["cCreatedBy"] = GClsProjectProperties._IGClsProjectProperties.CUserID;
-                    DtClass.DefaultView[IRowIndex]["dCreatedDate"] = DateTime.Now;
+                    DtItemCategory.DefaultView[IRowIndex]["cCreatedBy"] = GClsProjectProperties._IGClsProjectProperties.CUserID;
+                    DtItemCategory.DefaultView[IRowIndex]["dCreatedDate"] = DateTime.Now;
 
                 }
-                DtClass.DefaultView[IRowIndex].EndEdit();
-                BsSubject.EndEdit();
-                InfSQLServices._IInfSQLServices.InfUpdateDataAdapter(ClsProjectSqlQuerys._IClsProjectSqlQuerys.FrmSubjectsSelectQuery("1=2"), DtClass);
+                DtItemCategory.DefaultView[IRowIndex].EndEdit();
+                BsItemCategory.EndEdit();
+                InfSQLServices._IInfSQLServices.InfUpdateDataAdapter(ClsProjectSqlQuerys._IClsProjectSqlQuerys.FrmItemCategorySelectQuery("1=2"), DtItemCategory);
                 ClsMessage._IClsMessage.showSaveMessage();
                 LoadData();
 
@@ -267,8 +267,8 @@ namespace A3DIMS.Masters
         {
             try
             {
-                BsSubject.CancelEdit();
-                DtClass.RejectChanges();
+                BsItemCategory.CancelEdit();
+                DtItemCategory.RejectChanges();
                 ClsUtility._IClsUtility.FormMode = ClsUtility.enmFormMode.NormalMode;
                 SetFormMode(ClsUtility.enmFormMode.NormalMode);
             }
@@ -285,15 +285,15 @@ namespace A3DIMS.Masters
             {
                 using (frmSearch frmsrch = new frmSearch())
                 {
-                    frmsrch.InfSqlSelectQuery = ClsProjectSqlQuerys._IClsProjectSqlQuerys.FrmSubjectsSelectQuery();
+                    frmsrch.InfSqlSelectQuery = ClsProjectSqlQuerys._IClsProjectSqlQuerys.FrmItemCategorySelectQuery();
                     frmsrch.InfSqlWhereCondtion = "";
                     frmsrch.InfSqlOrderBy = "";
                     frmsrch.InfMultiSelect = false;
-                    frmsrch.InfSearchFormName = "Search Subject Code ....";
-                    frmsrch.InfCodeFieldName = "iId";
-                    frmsrch.InfDescriptionFieldName = "cSubjectCode";
-                    frmsrch.InfGridFieldName = "iId, cSubjectCode, cSubjectDescription, lSubjectStatus";
-                    frmsrch.InfGridFieldCaption = " iId, Subject Code ,Subject Description,Status";
+                    frmsrch.InfSearchFormName = "Search Item Category Code ....";
+                    frmsrch.InfCodeFieldName = "Id";
+                    frmsrch.InfDescriptionFieldName = "cItemCategoryCode";
+                    frmsrch.InfGridFieldName = "Id,cItemCategoryCode,cItemCategoryDesc,lItemCategoryStatus";
+                    frmsrch.InfGridFieldCaption = " iId, Item Category Code ,Item Category Description,Status";
                     frmsrch.InfGridFieldSize = "0,100,100,100";
                     frmsrch.ShowDialog(this);
                     //txtDesgCode.Text = frmsrch.infCodeFieldText;
@@ -309,8 +309,8 @@ namespace A3DIMS.Masters
                             //txtDeptDesc.Text = string.IsNullOrEmpty(dvDesg[0]["deptname"].ToString()) == true ? "" : dvDesg[0]["deptname"].ToString();
                             if (string.IsNullOrEmpty(frmsrch.InfCodeFieldText.Trim()) == false)
                             {
-                                int iRow = BsSubject.Find("iId", frmsrch.InfCodeFieldText.Trim());
-                                BsSubject.Position = iRow;
+                                int iRow = BsItemCategory.Find("Id", frmsrch.InfCodeFieldText.Trim());
+                                BsItemCategory.Position = iRow;
                                 dvDesg.RowFilter = "";
                             }
                         }
@@ -344,5 +344,9 @@ namespace A3DIMS.Masters
             Close();
         }
 
+        private void RdGrdClass_CellDoubleClick(object sender, GridViewCellEventArgs e)
+        {
+            RdPageViewMain.SelectedPage = RdTbpEntry;
+        }
     }
 }

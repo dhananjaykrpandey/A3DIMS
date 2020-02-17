@@ -9,6 +9,7 @@ namespace A3DIMS.Common.Forms
 {
     public partial class frmSearch : RadForm
     {
+        BindingSource BsSearch = new BindingSource();
         public frmSearch()
         {
             InitializeComponent();
@@ -70,7 +71,7 @@ namespace A3DIMS.Common.Forms
                 }
                 if (InfSqlWhereCondtion != null && InfSqlWhereCondtion.Trim() != "")
                 {
-                    SqlQuery = SqlQuery.ToUpper().Replace("WHERE","") + " Where " + InfSqlWhereCondtion.Trim();
+                    SqlQuery = SqlQuery.ToUpper().Replace("WHERE", "") + " Where " + InfSqlWhereCondtion.Trim();
                 }
 
                 if (InfSqlOrderBy != null && InfSqlOrderBy.Trim() != "")
@@ -109,8 +110,8 @@ namespace A3DIMS.Common.Forms
             {
                 if (InfSearchDatatable != null && InfSearchDatatable.DefaultView.Count > 0)
                 {
-                    BindingSource bs = new BindingSource();
-                    bs.DataSource = InfSearchDatatable.DefaultView;
+
+                    BsSearch.DataSource = InfSearchDatatable.DefaultView;
                     //
                     grdSearch.AutoGenerateColumns = false;
 
@@ -144,11 +145,8 @@ namespace A3DIMS.Common.Forms
                         }
                         grdSearch.Columns.Add(gcCol);
                     }
-                    grdSearch.DataSource = InfSearchDatatable.DefaultView;
-                    // var lastColIndex = grdSearch.Columns.Count - 1;
-                    // var lastCol = grdSearch.Columns[lastColIndex];
-                    //// lastCol.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
+                    grdSearch.DataSource = BsSearch;
+                 
 
                 }
             }
@@ -259,11 +257,7 @@ namespace A3DIMS.Common.Forms
 
             SearchText(true, "");
 
-            //}
-            //else
-            //{
-            //    SearchText(false, cmbColName.SelectedValue.ToString().Trim());
-            //}
+
         }
 
         private void btnOk_Click(object sender, EventArgs e)
@@ -343,7 +337,7 @@ namespace A3DIMS.Common.Forms
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
+            SearchText(true, "");
         }
 
         private void grdSearch_CellClick(object sender, GridViewCellEventArgs e)
@@ -354,9 +348,9 @@ namespace A3DIMS.Common.Forms
                 {
                     case "LSELECT":
                         int iRow = 0;
-                        iRow =e.RowIndex;
+                        iRow = e.RowIndex;
                         InfSearchDatatable.DefaultView[iRow].BeginEdit();
-                        InfSearchDatatable.DefaultView[iRow]["lSelect"] =!Convert.ToBoolean(InfSearchDatatable.DefaultView[iRow]["lSelect"]);
+                        InfSearchDatatable.DefaultView[iRow]["lSelect"] = !Convert.ToBoolean(InfSearchDatatable.DefaultView[iRow]["lSelect"]);
                         InfSearchDatatable.DefaultView[iRow].EndEdit();
                         break;
 
@@ -366,6 +360,14 @@ namespace A3DIMS.Common.Forms
             {
 
                 ClsMessage._IClsMessage.ProjectExceptionMessage(ex);
+            }
+        }
+
+        private void txtSearchKeyWord_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+               
             }
         }
     }

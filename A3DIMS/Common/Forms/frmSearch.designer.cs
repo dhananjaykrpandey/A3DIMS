@@ -135,6 +135,7 @@
             this.txtSearchKeyWord.Size = new System.Drawing.Size(427, 20);
             this.txtSearchKeyWord.TabIndex = 12;
             this.txtSearchKeyWord.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearchKeyWord.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchKeyWord_KeyPress);
             // 
             // panelbutton
             // 

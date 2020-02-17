@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using Telerik.WinControls.UI;
 
@@ -47,5 +48,6 @@ namespace A3DIMS.Common.Classes
         public string CContactNo1 { get; internal set; }
         public string CEmail { get; internal set; }
         public string cVersion { get; internal set; }
+        public string CProjectSqlConnection { get; set; } = Environment.MachineName.ToUpper()=="Aditya".ToUpper() ? ConfigurationManager.ConnectionStrings["A3DIMS"].ConnectionString : ConfigurationManager.ConnectionStrings["A3DIMSDatabase"].ConnectionString;
     }
 }

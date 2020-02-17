@@ -44,6 +44,8 @@
             this.RdRbTabReports = new Telerik.WinControls.UI.RibbonTab();
             this.RdRbTabMaster = new Telerik.WinControls.UI.RibbonTab();
             this.RdRbGrpMasters = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.RdBtnMenuItemUnit = new Telerik.WinControls.UI.RadButtonElement();
+            this.radImageButtonElement9 = new Telerik.WinControls.UI.RadImageButtonElement();
             this.RdBtnMenuItemCategory = new Telerik.WinControls.UI.RadButtonElement();
             this.radImageButtonElement4 = new Telerik.WinControls.UI.RadImageButtonElement();
             this.RdBtnMenuClass = new Telerik.WinControls.UI.RadButtonElement();
@@ -222,6 +224,8 @@
             // RdRbGrpMasters
             // 
             this.RdRbGrpMasters.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.RdBtnMenuItemUnit,
+            this.radImageButtonElement9,
             this.RdBtnMenuItemCategory,
             this.radImageButtonElement4,
             this.RdBtnMenuClass,
@@ -230,6 +234,22 @@
             this.radImageButtonElement6});
             this.RdRbGrpMasters.Name = "RdRbGrpMasters";
             this.RdRbGrpMasters.Text = "Genral Master";
+            // 
+            // RdBtnMenuItemUnit
+            // 
+            this.RdBtnMenuItemUnit.AutoSize = false;
+            this.RdBtnMenuItemUnit.Bounds = new System.Drawing.Rectangle(0, 0, 77, 69);
+            this.RdBtnMenuItemUnit.Image = global::A3DIMS.Properties.Resources.Unit48X48;
+            this.RdBtnMenuItemUnit.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RdBtnMenuItemUnit.Name = "RdBtnMenuItemUnit";
+            this.RdBtnMenuItemUnit.Tag = "FrmUnit";
+            this.RdBtnMenuItemUnit.Text = "Item &Unit";
+            this.RdBtnMenuItemUnit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // radImageButtonElement9
+            // 
+            this.radImageButtonElement9.Name = "radImageButtonElement9";
+            this.radImageButtonElement9.Text = "radImageButtonElement9";
             // 
             // RdBtnMenuItemCategory
             // 
@@ -255,7 +275,7 @@
             this.RdBtnMenuClass.Image = global::A3DIMS.Properties.Resources.Dumps48x48;
             this.RdBtnMenuClass.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.RdBtnMenuClass.Name = "RdBtnMenuClass";
-            this.RdBtnMenuClass.Tag = "FrmClass";
+            this.RdBtnMenuClass.Tag = "FrmItems";
             this.RdBtnMenuClass.Text = "&Items";
             this.RdBtnMenuClass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.RdBtnMenuClass.Click += new System.EventHandler(this.RdBtnMenuDownloadBhavCopy_Click);
@@ -272,7 +292,7 @@
             this.RdBtnMenuSubjects.Image = global::A3DIMS.Properties.Resources.Users48X48;
             this.RdBtnMenuSubjects.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.RdBtnMenuSubjects.Name = "RdBtnMenuSubjects";
-            this.RdBtnMenuSubjects.Tag = "FrmSubjects";
+            this.RdBtnMenuSubjects.Tag = "FrmSupplier";
             this.RdBtnMenuSubjects.Text = "&Supplier(s)";
             this.RdBtnMenuSubjects.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.RdBtnMenuSubjects.Click += new System.EventHandler(this.RdBtnMenuDownloadBhavCopy_Click);
@@ -512,6 +532,8 @@
         private Telerik.WinControls.UI.RadImageButtonElement radImageButtonElement8;
         private Telerik.WinControls.UI.Docking.DocumentContainer documentContainer1;
         private Telerik.WinControls.UI.Docking.RadDock RdDockMain;
+        private Telerik.WinControls.UI.RadButtonElement RdBtnMenuItemUnit;
+        private Telerik.WinControls.UI.RadImageButtonElement radImageButtonElement9;
     }
 }
 

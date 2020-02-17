@@ -205,9 +205,6 @@
   <data name="searchicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\searchicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ProjectHierarchy48X48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ProjectHierarchy48X48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="FindComponent48X48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FindComponent48X48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -219,6 +216,12 @@
   </data>
   <data name="LogBook48X48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogBook48X48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChildAddBlue16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChildAddBlue16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="StatusViz48X48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StatusViz48X48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,6 +238,9 @@
   <data name="ProjectSetup48X48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ProjectSetup48X48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ChildAdd16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChildAdd16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="UDGroupsReport48X48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UDGroupsReport48X48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -243,6 +249,9 @@
   </data>
   <data name="Delete16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Invoice48X48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Invoice48X48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Comapre48X48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Comapre48X48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,6 +262,9 @@
   <data name="Edit16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Edit16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="A3DKeyword" xml:space="preserve">
+    <value>208F5D45E5BFD36DA6F687DF9C442126</value>
+  </data>
   <data name="save_all" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\save_all.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -261,6 +273,9 @@
   </data>
   <data name="Append16X18" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Append16X18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Purchase48X48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Purchase48X48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DataImport24X24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DataImport24X24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,17 +289,14 @@
   <data name="Component48X48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Component48X48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="OpenFolder22X22" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OpenFolder22X22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="OK16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OK16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Sales48X48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sales48X48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Undo_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Undo-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Users48X48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Users48X48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DataUpload36X36" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DataUpload36X36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -310,11 +322,20 @@
   <data name="Reload16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Reload16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Theme16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Theme16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Find16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Find16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CheckAll20X20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CheckAll20X20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UnCheckAll16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UnCheckAll16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Copy16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Copy16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="analysis24X41" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\analysis24X41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -325,8 +346,8 @@
   <data name="Admin24X24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Admin24X24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ProjectHierarchy48X48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ProjectHierarchy48X48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PCFFileUpload48X48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PCFFileUpload48X48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -334,11 +355,17 @@
   <data name="Excel16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Excel16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Invoice48X48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Invoice48X48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Print16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Print16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Users48X48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Users48X48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ListView16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ListView16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stock24X24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stock24X24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Reports24X24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Reports24X24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -349,34 +376,10 @@
   <data name="UndoRed16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UndoRed16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Theme16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Theme16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="OpenFolder22X22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OpenFolder22X22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Stock24X24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Stock24X24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Purchase48X48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Purchase48X48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sales48X48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sales48X48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ChildAdd16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ChildAdd16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ChildAddBlue16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ChildAddBlue16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Copy16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Copy16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Find16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Find16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Print16X16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Print16X16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="A3DKeyword" xml:space="preserve">
-    <value>208F5D45E5BFD36DA6F687DF9C442126</value>
+  <data name="Unit48X48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Unit48X48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

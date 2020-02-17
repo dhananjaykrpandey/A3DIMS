@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn1 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn1 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn2 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn2 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmItemCategory));
             this.RdTxtSubjectDescription = new Telerik.WinControls.UI.RadTextBoxControl();
             this.RdPageViewMain = new Telerik.WinControls.UI.RadPageView();
             this.RdTbpEntry = new Telerik.WinControls.UI.RadPageViewPage();
             this.RdTxtSubjectRemarks = new Telerik.WinControls.UI.RadTextBoxControl();
-            this.RdTxtSubjectCode = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.RdTxtItemCategoryCode = new Telerik.WinControls.UI.RadTextBoxControl();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
@@ -72,7 +72,7 @@
             this.RdPageViewMain.SuspendLayout();
             this.RdTbpEntry.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RdTxtSubjectRemarks)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSubjectCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtItemCategoryCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
@@ -92,7 +92,7 @@
             this.RdTxtSubjectDescription.Location = new System.Drawing.Point(166, 62);
             this.RdTxtSubjectDescription.MaxLength = 200;
             this.RdTxtSubjectDescription.Name = "RdTxtSubjectDescription";
-            this.RdTxtSubjectDescription.NullText = "Enter Subject Description";
+            this.RdTxtSubjectDescription.NullText = "Enter Item Category Description";
             // 
             // 
             // 
@@ -116,7 +116,7 @@
             // 
             this.RdTbpEntry.Controls.Add(this.RdTxtSubjectRemarks);
             this.RdTbpEntry.Controls.Add(this.RdTxtSubjectDescription);
-            this.RdTbpEntry.Controls.Add(this.RdTxtSubjectCode);
+            this.RdTbpEntry.Controls.Add(this.RdTxtItemCategoryCode);
             this.RdTbpEntry.Controls.Add(this.radLabel4);
             this.RdTbpEntry.Controls.Add(this.radLabel3);
             this.RdTbpEntry.Controls.Add(this.radLabel2);
@@ -136,7 +136,7 @@
             this.RdTxtSubjectRemarks.MaxLength = 500;
             this.RdTxtSubjectRemarks.Multiline = true;
             this.RdTxtSubjectRemarks.Name = "RdTxtSubjectRemarks";
-            this.RdTxtSubjectRemarks.NullText = "Enter Subject Remarks";
+            this.RdTxtSubjectRemarks.NullText = "Enter Item Category Remarks";
             // 
             // 
             // 
@@ -144,19 +144,19 @@
             this.RdTxtSubjectRemarks.Size = new System.Drawing.Size(339, 38);
             this.RdTxtSubjectRemarks.TabIndex = 2;
             // 
-            // RdTxtSubjectCode
+            // RdTxtItemCategoryCode
             // 
-            this.RdTxtSubjectCode.BackColor = System.Drawing.Color.White;
-            this.RdTxtSubjectCode.Location = new System.Drawing.Point(166, 36);
-            this.RdTxtSubjectCode.MaxLength = 9;
-            this.RdTxtSubjectCode.Name = "RdTxtSubjectCode";
-            this.RdTxtSubjectCode.NullText = "Enter Subject Code";
+            this.RdTxtItemCategoryCode.BackColor = System.Drawing.Color.White;
+            this.RdTxtItemCategoryCode.Location = new System.Drawing.Point(166, 36);
+            this.RdTxtItemCategoryCode.MaxLength = 10;
+            this.RdTxtItemCategoryCode.Name = "RdTxtItemCategoryCode";
+            this.RdTxtItemCategoryCode.NullText = "Enter Item Category Code";
             // 
             // 
             // 
-            this.RdTxtSubjectCode.RootElement.UseDefaultDisabledPaint = false;
-            this.RdTxtSubjectCode.Size = new System.Drawing.Size(126, 20);
-            this.RdTxtSubjectCode.TabIndex = 0;
+            this.RdTxtItemCategoryCode.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtItemCategoryCode.Size = new System.Drawing.Size(141, 20);
+            this.RdTxtItemCategoryCode.TabIndex = 0;
             // 
             // radLabel4
             // 
@@ -170,18 +170,18 @@
             // 
             this.radLabel3.Location = new System.Drawing.Point(16, 90);
             this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(101, 18);
+            this.radLabel3.Size = new System.Drawing.Size(123, 18);
             this.radLabel3.TabIndex = 4;
-            this.radLabel3.Text = "Catergory Remarks";
+            this.radLabel3.Text = "Item Category Remarks";
             // 
             // radLabel2
             // 
             this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.radLabel2.Location = new System.Drawing.Point(16, 64);
             this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(123, 18);
+            this.radLabel2.Size = new System.Drawing.Size(146, 18);
             this.radLabel2.TabIndex = 1;
-            this.radLabel2.Text = "Catergory Description";
+            this.radLabel2.Text = "Item Category Description";
             // 
             // RdChkClassStatus
             // 
@@ -196,9 +196,9 @@
             this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.radLabel1.Location = new System.Drawing.Point(15, 38);
             this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(89, 18);
+            this.radLabel1.Size = new System.Drawing.Size(112, 18);
             this.radLabel1.TabIndex = 0;
-            this.radLabel1.Text = "Catergory Code";
+            this.radLabel1.Text = "Item Category Code";
             // 
             // RdTbpList
             // 
@@ -228,33 +228,34 @@
             this.RdGrdClass.MasterTemplate.AllowSearchRow = true;
             this.RdGrdClass.MasterTemplate.AutoGenerateColumns = false;
             this.RdGrdClass.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn1.EnableExpressionEditor = false;
-            gridViewTextBoxColumn1.FieldName = "cSubjectCode";
-            gridViewTextBoxColumn1.HeaderText = "Subject Code";
-            gridViewTextBoxColumn1.Name = "cSubjectCode";
-            gridViewTextBoxColumn1.Width = 256;
-            gridViewDateTimeColumn1.EnableExpressionEditor = false;
-            gridViewDateTimeColumn1.FieldName = "cSubjectDescription";
-            gridViewDateTimeColumn1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            gridViewDateTimeColumn1.HeaderText = "Subject Description";
-            gridViewDateTimeColumn1.Name = "cSubjectDescription";
-            gridViewDateTimeColumn1.Width = 336;
-            gridViewCheckBoxColumn1.EnableExpressionEditor = false;
-            gridViewCheckBoxColumn1.FieldName = "lSubjectStatus";
-            gridViewCheckBoxColumn1.HeaderText = "Status";
-            gridViewCheckBoxColumn1.MinWidth = 20;
-            gridViewCheckBoxColumn1.Name = "lSubjectStatus";
-            gridViewCheckBoxColumn1.Width = 168;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "cItemCategoryCode";
+            gridViewTextBoxColumn2.HeaderText = "Item Category Code";
+            gridViewTextBoxColumn2.Name = "cItemCategoryCode";
+            gridViewTextBoxColumn2.Width = 256;
+            gridViewDateTimeColumn2.EnableExpressionEditor = false;
+            gridViewDateTimeColumn2.FieldName = "cItemCategoryDesc";
+            gridViewDateTimeColumn2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            gridViewDateTimeColumn2.HeaderText = "Item Category Description";
+            gridViewDateTimeColumn2.Name = "cItemCategoryDesc";
+            gridViewDateTimeColumn2.Width = 336;
+            gridViewCheckBoxColumn2.EnableExpressionEditor = false;
+            gridViewCheckBoxColumn2.FieldName = "lItemCategoryStatus";
+            gridViewCheckBoxColumn2.HeaderText = "Status";
+            gridViewCheckBoxColumn2.MinWidth = 20;
+            gridViewCheckBoxColumn2.Name = "lItemCategoryStatus";
+            gridViewCheckBoxColumn2.Width = 168;
             this.RdGrdClass.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn1,
-            gridViewDateTimeColumn1,
-            gridViewCheckBoxColumn1});
+            gridViewTextBoxColumn2,
+            gridViewDateTimeColumn2,
+            gridViewCheckBoxColumn2});
             this.RdGrdClass.MasterTemplate.EnableFiltering = true;
-            this.RdGrdClass.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.RdGrdClass.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.RdGrdClass.Name = "RdGrdClass";
             this.RdGrdClass.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.RdGrdClass.Size = new System.Drawing.Size(779, 369);
             this.RdGrdClass.TabIndex = 0;
+            this.RdGrdClass.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RdGrdClass_CellDoubleClick);
             // 
             // BtnEdit
             // 
@@ -380,6 +381,7 @@
             // 
             this.TxtPositionItem.AccessibleName = "Position";
             this.TxtPositionItem.AutoSize = false;
+            this.TxtPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtPositionItem.Name = "TxtPositionItem";
             this.TxtPositionItem.Size = new System.Drawing.Size(50, 23);
             this.TxtPositionItem.Text = "0";
@@ -489,7 +491,7 @@
             this.RdTbpEntry.ResumeLayout(false);
             this.RdTbpEntry.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RdTxtSubjectRemarks)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSubjectCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtItemCategoryCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
@@ -513,7 +515,7 @@
         private Telerik.WinControls.UI.RadPageView RdPageViewMain;
         private Telerik.WinControls.UI.RadPageViewPage RdTbpEntry;
         private Telerik.WinControls.UI.RadTextBoxControl RdTxtSubjectRemarks;
-        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSubjectCode;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtItemCategoryCode;
         private Telerik.WinControls.UI.RadLabel radLabel4;
         private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.UI.RadLabel radLabel2;

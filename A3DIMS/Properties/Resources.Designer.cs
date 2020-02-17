@@ -902,6 +902,16 @@ namespace A3DIMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Unit48X48 {
+            get {
+                object obj = ResourceManager.GetObject("Unit48X48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap UpArrowGreen8X16 {
             get {
                 object obj = ResourceManager.GetObject("UpArrowGreen8X16", resourceCulture);

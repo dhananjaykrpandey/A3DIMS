@@ -1,8 +1,6 @@
 ﻿using A3DIMS.Common.Classes;
+using A3DSQLServices;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace A3DIMS
@@ -25,6 +23,7 @@ namespace A3DIMS
                 }
                 else
                 {
+                    InfSQLServices._IInfSQLServices.InfSQLConnectionString = GClsProjectProperties._IGClsProjectProperties.CProjectSqlConnection;
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
                     Application.Run(new FrmA3DIMSMainMdi());

@@ -153,6 +153,24 @@
     <Compile Include="ReferenceForms\FrmItemCategory.designer.cs">
       <DependentUpon>FrmItemCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReferenceForms\FrmItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReferenceForms\FrmItems.Designer.cs">
+      <DependentUpon>FrmItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReferenceForms\FrmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReferenceForms\FrmSupplier.Designer.cs">
+      <DependentUpon>FrmSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReferenceForms\FrmUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReferenceForms\FrmUnit.Designer.cs">
+      <DependentUpon>FrmUnit.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Common\Forms\FrmA3DIMSMainMdi.resx">
       <DependentUpon>FrmA3DIMSMainMdi.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReferenceForms\FrmItemCategory.resx">
       <DependentUpon>FrmItemCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReferenceForms\FrmItems.resx">
+      <DependentUpon>FrmItems.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ArnikaTechnologies.arch">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -489,6 +510,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ChildAddBlue16X16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unit48X48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
