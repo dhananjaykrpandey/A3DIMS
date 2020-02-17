@@ -77,6 +77,9 @@
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.documentContainer1 = new Telerik.WinControls.UI.Docking.DocumentContainer();
             this.RdDockMain = new Telerik.WinControls.UI.Docking.RadDock();
+            this.RdRbTabAboutUs = new Telerik.WinControls.UI.RibbonTab();
+            this.radRibbonBarGroup1 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.RdBtnMenuItemAboutUs = new Telerik.WinControls.UI.RadButtonElement();
             ((System.ComponentModel.ISupportInitialize)(this.RdRibbonBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RdStatusStrip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentContainer1)).BeginInit();
@@ -92,7 +95,8 @@
             this.RdRbTabStock,
             this.RdRbTabReports,
             this.RdRbTabMaster,
-            this.RdRbTabAdministrator});
+            this.RdRbTabAdministrator,
+            this.RdRbTabAboutUs});
             // 
             // 
             // 
@@ -215,7 +219,7 @@
             // RdRbTabMaster
             // 
             this.RdRbTabMaster.Image = global::A3DIMS.Properties.Resources.ProjectSetup24X24;
-            this.RdRbTabMaster.IsSelected = true;
+            this.RdRbTabMaster.IsSelected = false;
             this.RdRbTabMaster.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.RdRbGrpMasters});
             this.RdRbTabMaster.Name = "RdRbTabMaster";
@@ -452,6 +456,32 @@
             this.RdDockMain.TabStop = false;
             this.RdDockMain.Text = "radDock1";
             // 
+            // RdRbTabAboutUs
+            // 
+            this.RdRbTabAboutUs.IsSelected = true;
+            this.RdRbTabAboutUs.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radRibbonBarGroup1});
+            this.RdRbTabAboutUs.Name = "RdRbTabAboutUs";
+            this.RdRbTabAboutUs.Text = "About Us";
+            // 
+            // radRibbonBarGroup1
+            // 
+            this.radRibbonBarGroup1.AutoSize = false;
+            this.radRibbonBarGroup1.Bounds = new System.Drawing.Rectangle(0, 0, 166, 94);
+            this.radRibbonBarGroup1.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.RdBtnMenuItemAboutUs});
+            this.radRibbonBarGroup1.Name = "radRibbonBarGroup1";
+            this.radRibbonBarGroup1.Text = "About Us";
+            // 
+            // RdBtnMenuItemAboutUs
+            // 
+            this.RdBtnMenuItemAboutUs.AutoSize = false;
+            this.RdBtnMenuItemAboutUs.Bounds = new System.Drawing.Rectangle(0, 0, 100, 69);
+            this.RdBtnMenuItemAboutUs.Name = "RdBtnMenuItemAboutUs";
+            this.RdBtnMenuItemAboutUs.Text = "About Us";
+            this.RdBtnMenuItemAboutUs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.RdBtnMenuItemAboutUs.Click += new System.EventHandler(this.RdBtnMenuItemAboutUs_Click);
+            // 
             // FrmA3DIMSMainMdi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -535,6 +565,9 @@
         private Telerik.WinControls.UI.Docking.RadDock RdDockMain;
         private Telerik.WinControls.UI.RadButtonElement RdBtnMenuItemUnit;
         private Telerik.WinControls.UI.RadImageButtonElement radImageButtonElement9;
+        private Telerik.WinControls.UI.RibbonTab RdRbTabAboutUs;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup1;
+        private Telerik.WinControls.UI.RadButtonElement RdBtnMenuItemAboutUs;
     }
 }
 

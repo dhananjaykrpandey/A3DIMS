@@ -457,6 +457,7 @@
     <None Include="Resources\UserGroups48X48.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AboutUs\" />
     <Folder Include="Administrator\" />
     <Folder Include="Login\" />
     <Folder Include="Reports\" />
