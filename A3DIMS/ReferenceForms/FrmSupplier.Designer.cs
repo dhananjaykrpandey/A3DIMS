@@ -94,7 +94,7 @@
             this.RdPageViewMain.Location = new System.Drawing.Point(0, 25);
             this.RdPageViewMain.Name = "RdPageViewMain";
             this.RdPageViewMain.SelectedPage = this.RdTbpEntry;
-            this.RdPageViewMain.Size = new System.Drawing.Size(800, 425);
+            this.RdPageViewMain.Size = new System.Drawing.Size(1004, 585);
             this.RdPageViewMain.TabIndex = 7;
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.RdPageViewMain.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.ItemList;
             // 
@@ -112,7 +112,7 @@
             this.RdTbpEntry.ItemSize = new System.Drawing.SizeF(67F, 36F);
             this.RdTbpEntry.Location = new System.Drawing.Point(10, 45);
             this.RdTbpEntry.Name = "RdTbpEntry";
-            this.RdTbpEntry.Size = new System.Drawing.Size(779, 369);
+            this.RdTbpEntry.Size = new System.Drawing.Size(983, 529);
             this.RdTbpEntry.Text = "Entry";
             // 
             // RdTxtUnitRemarks
@@ -311,7 +311,7 @@
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.TxtPositionItem;
             this.bindingNavigator1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.bindingNavigator1.Size = new System.Drawing.Size(800, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1004, 25);
             this.bindingNavigator1.TabIndex = 6;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -465,7 +465,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1004, 610);
             this.Controls.Add(this.RdPageViewMain);
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "FrmSupplier";
@@ -474,6 +474,7 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "FrmSupplier";
+            this.Load += new System.EventHandler(this.FrmSupplier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.RdPageViewMain)).EndInit();
             this.RdPageViewMain.ResumeLayout(false);
             this.RdTbpEntry.ResumeLayout(false);

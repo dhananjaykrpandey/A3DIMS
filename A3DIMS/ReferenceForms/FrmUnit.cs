@@ -24,6 +24,7 @@ namespace A3DIMS.ReferenceForms
         {
             InitializeComponent();
             BindControls();
+
         }
         public void LoadData()
         {

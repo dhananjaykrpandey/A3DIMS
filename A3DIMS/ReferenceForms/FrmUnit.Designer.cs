@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUnit));
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn1 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn1 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn2 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn2 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.BtnExport = new System.Windows.Forms.ToolStripButton();
             this.BtnReload = new System.Windows.Forms.ToolStripButton();
@@ -317,33 +317,34 @@
             this.RdGrdClass.MasterTemplate.AllowSearchRow = true;
             this.RdGrdClass.MasterTemplate.AutoGenerateColumns = false;
             this.RdGrdClass.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn1.EnableExpressionEditor = false;
-            gridViewTextBoxColumn1.FieldName = "cItemCategoryCode";
-            gridViewTextBoxColumn1.HeaderText = "Item Category Code";
-            gridViewTextBoxColumn1.Name = "cItemCategoryCode";
-            gridViewTextBoxColumn1.Width = 256;
-            gridViewDateTimeColumn1.EnableExpressionEditor = false;
-            gridViewDateTimeColumn1.FieldName = "cItemCategoryDesc";
-            gridViewDateTimeColumn1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            gridViewDateTimeColumn1.HeaderText = "Item Category Description";
-            gridViewDateTimeColumn1.Name = "cItemCategoryDesc";
-            gridViewDateTimeColumn1.Width = 336;
-            gridViewCheckBoxColumn1.EnableExpressionEditor = false;
-            gridViewCheckBoxColumn1.FieldName = "lItemCategoryStatus";
-            gridViewCheckBoxColumn1.HeaderText = "Status";
-            gridViewCheckBoxColumn1.MinWidth = 20;
-            gridViewCheckBoxColumn1.Name = "lItemCategoryStatus";
-            gridViewCheckBoxColumn1.Width = 168;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "cUnitCode";
+            gridViewTextBoxColumn2.HeaderText = "Unit Code";
+            gridViewTextBoxColumn2.Name = "cUnitCode";
+            gridViewTextBoxColumn2.Width = 256;
+            gridViewDateTimeColumn2.EnableExpressionEditor = false;
+            gridViewDateTimeColumn2.FieldName = "cUnitDesc";
+            gridViewDateTimeColumn2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            gridViewDateTimeColumn2.HeaderText = "Unit Description";
+            gridViewDateTimeColumn2.Name = "cUnitDesc";
+            gridViewDateTimeColumn2.Width = 336;
+            gridViewCheckBoxColumn2.EnableExpressionEditor = false;
+            gridViewCheckBoxColumn2.FieldName = "lUnitStatus";
+            gridViewCheckBoxColumn2.HeaderText = "Status";
+            gridViewCheckBoxColumn2.MinWidth = 20;
+            gridViewCheckBoxColumn2.Name = "lUnitStatus";
+            gridViewCheckBoxColumn2.Width = 168;
             this.RdGrdClass.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn1,
-            gridViewDateTimeColumn1,
-            gridViewCheckBoxColumn1});
+            gridViewTextBoxColumn2,
+            gridViewDateTimeColumn2,
+            gridViewCheckBoxColumn2});
             this.RdGrdClass.MasterTemplate.EnableFiltering = true;
-            this.RdGrdClass.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.RdGrdClass.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.RdGrdClass.Name = "RdGrdClass";
             this.RdGrdClass.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.RdGrdClass.Size = new System.Drawing.Size(779, 369);
             this.RdGrdClass.TabIndex = 0;
+            this.RdGrdClass.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RdGrdClass_CellDoubleClick);
             // 
             // RdTbpList
             // 
