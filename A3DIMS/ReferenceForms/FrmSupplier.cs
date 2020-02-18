@@ -40,10 +40,10 @@ namespace A3DIMS.ReferenceForms
 
                 LoadData();
 
-                RdTxtUnitCode.DataBindings.Add("Text", BsUnit, "cUnitCode", false, DataSourceUpdateMode.OnPropertyChanged);
-                RdTxtUnitDescription.DataBindings.Add(new Binding("Text", this.BsUnit, "cUnitDesc", true, DataSourceUpdateMode.OnPropertyChanged));
-                RdTxtUnitRemarks.DataBindings.Add(new Binding("Text", this.BsUnit, "cUnitRemarks", true, DataSourceUpdateMode.OnPropertyChanged));
-                RdChkClassStatus.DataBindings.Add(new Binding("Checked", this.BsUnit, "lUnitStatus", true, DataSourceUpdateMode.OnPropertyChanged, false));
+                RdTxtSuppCode.DataBindings.Add("Text", BsUnit, "cUnitCode", false, DataSourceUpdateMode.OnPropertyChanged);
+                RdTxtSuppName.DataBindings.Add(new Binding("Text", this.BsUnit, "cUnitDesc", true, DataSourceUpdateMode.OnPropertyChanged));
+                RdTxtSuppRemarks.DataBindings.Add(new Binding("Text", this.BsUnit, "cUnitRemarks", true, DataSourceUpdateMode.OnPropertyChanged));
+                RdChkSuppStatus.DataBindings.Add(new Binding("Checked", this.BsUnit, "lUnitStatus", true, DataSourceUpdateMode.OnPropertyChanged, false));
                 //RdChkAcademicYearStatus.Checked
 
             }
@@ -84,19 +84,19 @@ namespace A3DIMS.ReferenceForms
             {
                 errorProvider1.Clear();
                 bool _LValidateSave = true;
-                if (!ClsUtility._IClsUtility.LValidateTextBox(RdTxtUnitCode, errorProvider1, "Unit Code Cannot Be Left Blank."))
+                if (!ClsUtility._IClsUtility.LValidateTextBox(RdTxtSuppCode, errorProvider1, "Unit Code Cannot Be Left Blank."))
                 {
                     _LValidateSave = false;
                 }
-                else if (!ClsUtility._IClsUtility.LValidateTextBox(RdTxtUnitDescription, errorProvider1, "Unit Description Cannot Be Left Blank."))
+                else if (!ClsUtility._IClsUtility.LValidateTextBox(RdTxtSuppName, errorProvider1, "Unit Description Cannot Be Left Blank."))
                 {
 
                     _LValidateSave = false;
                 }
-                else if (ClsUtility._IClsUtility.FormMode == ClsUtility.enmFormMode.AddMode && ClsUtility._IClsUtility.IsCodeExists("A3DIMS.dbo.MUnit", "cUnitCode", RdTxtUnitCode.Text.Trim(), "Unit Code Already Exists!!"))
+                else if (ClsUtility._IClsUtility.FormMode == ClsUtility.enmFormMode.AddMode && ClsUtility._IClsUtility.IsCodeExists("A3DIMS.dbo.MUnit", "cUnitCode", RdTxtSuppCode.Text.Trim(), "Unit Code Already Exists!!"))
                 {
-                    errorProvider1.SetError(RdTxtUnitCode, "Unit Code Already Exists!!");
-                    RdTxtUnitCode.Focus();
+                    errorProvider1.SetError(RdTxtSuppCode, "Unit Code Already Exists!!");
+                    RdTxtSuppCode.Focus();
                     _LValidateSave = false;
                 }
                 return _LValidateSave;
@@ -134,7 +134,7 @@ namespace A3DIMS.ReferenceForms
             {
                 ClsUtility._IClsUtility.FormMode = ClsUtility.enmFormMode.EditMode;
                 SetFormMode(ClsUtility.enmFormMode.EditMode);
-                RdTxtUnitCode.Enabled = false;
+                RdTxtSuppCode.Enabled = false;
 
 
             }
@@ -172,7 +172,7 @@ namespace A3DIMS.ReferenceForms
                 DtUnit.DefaultView[IRowIndex].BeginEdit();
                 DtUnit.DefaultView[IRowIndex]["cUpdatedBy"] = GClsProjectProperties._IGClsProjectProperties.CUserID;
                 DtUnit.DefaultView[IRowIndex]["dUpdatedDate"] = DateTime.Now;
-                DtUnit.DefaultView[IRowIndex]["lUnitStatus"] = RdChkClassStatus.Checked;
+                DtUnit.DefaultView[IRowIndex]["lUnitStatus"] = RdChkSuppStatus.Checked;
                 if (ClsUtility._IClsUtility.FormMode == ClsUtility.enmFormMode.AddMode)
                 {
                     DtUnit.DefaultView[IRowIndex]["cCreatedBy"] = GClsProjectProperties._IGClsProjectProperties.CUserID;
@@ -274,13 +274,12 @@ namespace A3DIMS.ReferenceForms
         {
             RdPageViewMain.SelectedPage = RdTbpEntry;
         }
-
         public void SetEnable(bool lValue)
         {
-            RdTxtUnitCode.Enabled = lValue;
-            RdTxtUnitDescription.Enabled = lValue;
-            RdTxtUnitRemarks.Enabled = lValue;
-            RdChkClassStatus.Enabled = lValue;
+            RdTxtSuppCode.Enabled = lValue;
+            RdTxtSuppName.Enabled = lValue;
+            RdTxtSuppRemarks.Enabled = lValue;
+            RdChkSuppStatus.Enabled = lValue;
 
             BtnAddNew.Enabled = !lValue;
             BtnEdit.Enabled = !lValue;
@@ -300,27 +299,23 @@ namespace A3DIMS.ReferenceForms
 
             errorProvider1.Clear();
         }
-
         public void SetFormMode(ClsUtility.enmFormMode _FormMode)
         {
             switch (_FormMode)
             {
                 case ClsUtility.enmFormMode.AddMode:
                     SetEnable(true);
-                    RdTxtUnitCode.Focus();
+                    RdTxtSuppCode.Focus();
                     break;
                 case ClsUtility.enmFormMode.EditMode:
                     SetEnable(true);
-                    RdTxtUnitCode.Enabled = false;
+                    RdTxtSuppCode.Enabled = false;
                     break;
                 case ClsUtility.enmFormMode.NormalMode:
                     SetEnable(false);
                     break;
             }
         }
-
-
-
         private void FrmSupplier_Load(object sender, EventArgs e)
         {
             try
@@ -336,6 +331,66 @@ namespace A3DIMS.ReferenceForms
             }
         }
 
-       
+        private void RdTxtSuppPostalCode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                e.Handled =!ClsUtility._IClsUtility.IsNumeric(e.KeyChar);
+                                              
+            }
+            catch (Exception ex)
+            {
+
+                ClsMessage._IClsMessage.ProjectExceptionMessage(ex);
+            }
+        }
+
+        private void RdTxtSuppPhoneNo1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (e.KeyChar != 43 && e.KeyChar != 45 && !ClsUtility._IClsUtility.IsNumeric(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                ClsMessage._IClsMessage.ProjectExceptionMessage(ex);
+            }
+        }
+
+        private void RdTxtSuppEmailID_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                if (!ClsUtility._IClsUtility.IsValidEmail(RdTxtSuppEmailID.Text.Trim()))
+                {
+                    e.Cancel = true;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                ClsMessage._IClsMessage.ProjectExceptionMessage(ex);
+            }
+        }
+
+        private void RdTxtSuppWebSite_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                if (!ClsUtility._IClsUtility.IsValidWebAddress(RdTxtSuppWebSite.Text.Trim()))
+                {
+                    e.Cancel = true;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                ClsMessage._IClsMessage.ProjectExceptionMessage(ex);
+            }
+        }
     }
 }

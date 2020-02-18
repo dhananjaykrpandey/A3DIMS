@@ -31,6 +31,37 @@ namespace A3DIMS
 
             
         }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            switch (keyData)
+            {
+                case (Keys.Alt | Keys.U):
+                    RdBtnMenuItemUnit.PerformClick();
+                    break;
+                case (Keys.Alt | Keys.S):
+                    RdBtnMenuSupplier.PerformClick();
+                    break;
+                case (Keys.Alt | Keys.C):
+                    RdBtnMenuItemCategory.PerformClick();
+                    break;
+                case (Keys.Alt | Keys.I):
+                    RdBtnMenuItem.PerformClick();
+                    break;
+                case (Keys.Alt | Keys.R):
+                    RdBtnMenuStockRegister.PerformClick();
+                    break;
+                case (Keys.Alt | Keys.A):
+                    RdBtnMenuSales.PerformClick();
+                    break;
+                case (Keys.Alt | Keys.P):
+                    RdBtnMenuPurchase.PerformClick();
+                    break;
+                case (Keys.Alt | Keys.V):
+                    RdBtnMenuInvoice.PerformClick();
+                    break;
+            }
+                    return base.ProcessCmdKey(ref msg, keyData);
+        }
         public RadForm TryGetFormByName(string frmname)
         {
             var formType = Assembly.GetExecutingAssembly().GetTypes().FirstOrDefault(a => (a.BaseType == typeof(RadForm) || a.BaseType == typeof(Form)) && a.Name == frmname);
