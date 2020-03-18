@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn2 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn2 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn5 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn5 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition5 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSupplier));
             this.RdPageViewMain = new Telerik.WinControls.UI.RadPageView();
             this.RdTbpEntry = new Telerik.WinControls.UI.RadPageViewPage();
-            this.RdTxtUnitRemarks = new Telerik.WinControls.UI.RadTextBoxControl();
-            this.RdTxtUnitDescription = new Telerik.WinControls.UI.RadTextBoxControl();
-            this.RdTxtUnitCode = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.RdTxtSuppRemarks = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.RdTxtSuppName = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.RdTxtSuppCode = new Telerik.WinControls.UI.RadTextBoxControl();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
-            this.RdChkClassStatus = new Telerik.WinControls.UI.RadCheckBox();
+            this.RdChkSuppStatus = new Telerik.WinControls.UI.RadCheckBox();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.RdTbpList = new Telerik.WinControls.UI.RadPageViewPage();
             this.RdGrdClass = new Telerik.WinControls.UI.RadGridView();
@@ -67,22 +67,98 @@
             this.BtnExport = new System.Windows.Forms.ToolStripButton();
             this.BtnClose = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.RdTxtSuppID = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
+            this.RdTxtSuppAddress = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
+            this.RdTxtSuppPhoneNo1 = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
+            this.RdTxtSuppPhoneNo2 = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
+            this.RdTxtSuppFaxNo = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
+            this.RdTxtSuppEmailID = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
+            this.RdTxtSuppWebSite = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
+            this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
+            this.radGroupBox3 = new Telerik.WinControls.UI.RadGroupBox();
+            this.radGroupBox4 = new Telerik.WinControls.UI.RadGroupBox();
+            this.radLabel19 = new Telerik.WinControls.UI.RadLabel();
+            this.RdTxtSuppCity = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.radLabel20 = new Telerik.WinControls.UI.RadLabel();
+            this.RdTxtSuppCountry = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.radLabel21 = new Telerik.WinControls.UI.RadLabel();
+            this.RdTxtSuppState = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.radLabel22 = new Telerik.WinControls.UI.RadLabel();
+            this.RdTxtSuppPostalCode = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.radLabel12 = new Telerik.WinControls.UI.RadLabel();
+            this.RdTxtSuppContactPerson = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
+            this.RdTxtSuppContactPersonDesgination = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
+            this.RdTxtSuppContactPersonMobileNo = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.radLabel15 = new Telerik.WinControls.UI.RadLabel();
+            this.RdTxtSuppContactPersonPhoneNo = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.radLabel16 = new Telerik.WinControls.UI.RadLabel();
+            this.RdTxtSuppContactPersonEmailID = new Telerik.WinControls.UI.RadTextBoxControl();
             ((System.ComponentModel.ISupportInitialize)(this.RdPageViewMain)).BeginInit();
             this.RdPageViewMain.SuspendLayout();
             this.RdTbpEntry.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RdTxtUnitRemarks)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RdTxtUnitDescription)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RdTxtUnitCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppRemarks)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RdChkClassStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdChkSuppStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             this.RdTbpList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RdGrdClass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RdGrdClass.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppAddress)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppPhoneNo1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppPhoneNo2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppFaxNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppEmailID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppWebSite)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
+            this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
+            this.radGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).BeginInit();
+            this.radGroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox4)).BeginInit();
+            this.radGroupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppCity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppCountry)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppState)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppPostalCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppContactPerson)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppContactPersonDesgination)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppContactPersonMobileNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppContactPersonPhoneNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppContactPersonEmailID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,73 +170,70 @@
             this.RdPageViewMain.Location = new System.Drawing.Point(0, 25);
             this.RdPageViewMain.Name = "RdPageViewMain";
             this.RdPageViewMain.SelectedPage = this.RdTbpEntry;
-            this.RdPageViewMain.Size = new System.Drawing.Size(1004, 585);
-            this.RdPageViewMain.TabIndex = 7;
+            this.RdPageViewMain.Size = new System.Drawing.Size(1156, 731);
+            this.RdPageViewMain.TabIndex = 1;
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.RdPageViewMain.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.ItemList;
             // 
             // RdTbpEntry
             // 
-            this.RdTbpEntry.Controls.Add(this.RdTxtUnitRemarks);
-            this.RdTbpEntry.Controls.Add(this.RdTxtUnitDescription);
-            this.RdTbpEntry.Controls.Add(this.RdTxtUnitCode);
-            this.RdTbpEntry.Controls.Add(this.radLabel4);
-            this.RdTbpEntry.Controls.Add(this.radLabel3);
-            this.RdTbpEntry.Controls.Add(this.radLabel2);
-            this.RdTbpEntry.Controls.Add(this.RdChkClassStatus);
-            this.RdTbpEntry.Controls.Add(this.radLabel1);
+            this.RdTbpEntry.Controls.Add(this.radGroupBox4);
+            this.RdTbpEntry.Controls.Add(this.radGroupBox3);
+            this.RdTbpEntry.Controls.Add(this.radGroupBox2);
+            this.RdTbpEntry.Controls.Add(this.radGroupBox1);
             this.RdTbpEntry.Image = global::A3DIMS.Properties.Resources.CartView25X24;
             this.RdTbpEntry.ItemSize = new System.Drawing.SizeF(67F, 36F);
             this.RdTbpEntry.Location = new System.Drawing.Point(10, 45);
             this.RdTbpEntry.Name = "RdTbpEntry";
-            this.RdTbpEntry.Size = new System.Drawing.Size(983, 529);
+            this.RdTbpEntry.Size = new System.Drawing.Size(1135, 675);
             this.RdTbpEntry.Text = "Entry";
             // 
-            // RdTxtUnitRemarks
+            // RdTxtSuppRemarks
             // 
-            this.RdTxtUnitRemarks.BackColor = System.Drawing.Color.White;
-            this.RdTxtUnitRemarks.Location = new System.Drawing.Point(166, 88);
-            this.RdTxtUnitRemarks.MaxLength = 500;
-            this.RdTxtUnitRemarks.Multiline = true;
-            this.RdTxtUnitRemarks.Name = "RdTxtUnitRemarks";
-            this.RdTxtUnitRemarks.NullText = "Enter Unit Remarks";
-            // 
-            // 
-            // 
-            this.RdTxtUnitRemarks.RootElement.UseDefaultDisabledPaint = false;
-            this.RdTxtUnitRemarks.Size = new System.Drawing.Size(339, 38);
-            this.RdTxtUnitRemarks.TabIndex = 2;
-            // 
-            // RdTxtUnitDescription
-            // 
-            this.RdTxtUnitDescription.BackColor = System.Drawing.Color.White;
-            this.RdTxtUnitDescription.Location = new System.Drawing.Point(166, 62);
-            this.RdTxtUnitDescription.MaxLength = 200;
-            this.RdTxtUnitDescription.Name = "RdTxtUnitDescription";
-            this.RdTxtUnitDescription.NullText = "Enter Unit Description";
+            this.RdTxtSuppRemarks.BackColor = System.Drawing.Color.White;
+            this.RdTxtSuppRemarks.Location = new System.Drawing.Point(128, 29);
+            this.RdTxtSuppRemarks.MaxLength = 500;
+            this.RdTxtSuppRemarks.Multiline = true;
+            this.RdTxtSuppRemarks.Name = "RdTxtSuppRemarks";
+            this.RdTxtSuppRemarks.NullText = "Supplier Compnay / Firms  Remarks";
             // 
             // 
             // 
-            this.RdTxtUnitDescription.RootElement.UseDefaultDisabledPaint = false;
-            this.RdTxtUnitDescription.Size = new System.Drawing.Size(339, 20);
-            this.RdTxtUnitDescription.TabIndex = 1;
+            this.RdTxtSuppRemarks.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtSuppRemarks.Size = new System.Drawing.Size(530, 38);
+            this.RdTxtSuppRemarks.TabIndex = 0;
             // 
-            // RdTxtUnitCode
+            // RdTxtSuppName
             // 
-            this.RdTxtUnitCode.BackColor = System.Drawing.Color.White;
-            this.RdTxtUnitCode.Location = new System.Drawing.Point(166, 36);
-            this.RdTxtUnitCode.MaxLength = 10;
-            this.RdTxtUnitCode.Name = "RdTxtUnitCode";
-            this.RdTxtUnitCode.NullText = "Enter Unit Code";
+            this.RdTxtSuppName.BackColor = System.Drawing.Color.White;
+            this.RdTxtSuppName.Location = new System.Drawing.Point(129, 45);
+            this.RdTxtSuppName.MaxLength = 100;
+            this.RdTxtSuppName.Name = "RdTxtSuppName";
+            this.RdTxtSuppName.NullText = "Supplier Compnay / Firms Name";
             // 
             // 
             // 
-            this.RdTxtUnitCode.RootElement.UseDefaultDisabledPaint = false;
-            this.RdTxtUnitCode.Size = new System.Drawing.Size(141, 20);
-            this.RdTxtUnitCode.TabIndex = 0;
+            this.RdTxtSuppName.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtSuppName.Size = new System.Drawing.Size(528, 20);
+            this.RdTxtSuppName.TabIndex = 1;
+            // 
+            // RdTxtSuppCode
+            // 
+            this.RdTxtSuppCode.BackColor = System.Drawing.Color.White;
+            this.RdTxtSuppCode.IsReadOnly = true;
+            this.RdTxtSuppCode.Location = new System.Drawing.Point(129, 19);
+            this.RdTxtSuppCode.MaxLength = 20;
+            this.RdTxtSuppCode.Name = "RdTxtSuppCode";
+            this.RdTxtSuppCode.NullText = "Supplier Code (Auto Generated)";
+            // 
+            // 
+            // 
+            this.RdTxtSuppCode.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtSuppCode.Size = new System.Drawing.Size(204, 20);
+            this.RdTxtSuppCode.TabIndex = 0;
             // 
             // radLabel4
             // 
-            this.radLabel4.Location = new System.Drawing.Point(16, 132);
+            this.radLabel4.Location = new System.Drawing.Point(6, 73);
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.Size = new System.Drawing.Size(37, 18);
             this.radLabel4.TabIndex = 5;
@@ -168,7 +241,7 @@
             // 
             // radLabel3
             // 
-            this.radLabel3.Location = new System.Drawing.Point(16, 90);
+            this.radLabel3.Location = new System.Drawing.Point(6, 31);
             this.radLabel3.Name = "radLabel3";
             this.radLabel3.Size = new System.Drawing.Size(73, 18);
             this.radLabel3.TabIndex = 4;
@@ -177,28 +250,28 @@
             // radLabel2
             // 
             this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.radLabel2.Location = new System.Drawing.Point(16, 64);
+            this.radLabel2.Location = new System.Drawing.Point(6, 47);
             this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(93, 18);
+            this.radLabel2.Size = new System.Drawing.Size(38, 18);
             this.radLabel2.TabIndex = 1;
-            this.radLabel2.Text = "Unit Description";
+            this.radLabel2.Text = "Name";
             // 
-            // RdChkClassStatus
+            // RdChkSuppStatus
             // 
-            this.RdChkClassStatus.Location = new System.Drawing.Point(166, 132);
-            this.RdChkClassStatus.Name = "RdChkClassStatus";
-            this.RdChkClassStatus.Size = new System.Drawing.Size(106, 18);
-            this.RdChkClassStatus.TabIndex = 3;
-            this.RdChkClassStatus.Text = "Active / In-Active";
+            this.RdChkSuppStatus.Location = new System.Drawing.Point(130, 73);
+            this.RdChkSuppStatus.Name = "RdChkSuppStatus";
+            this.RdChkSuppStatus.Size = new System.Drawing.Size(106, 18);
+            this.RdChkSuppStatus.TabIndex = 1;
+            this.RdChkSuppStatus.Text = "Active / In-Active";
             // 
             // radLabel1
             // 
             this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.radLabel1.Location = new System.Drawing.Point(15, 38);
+            this.radLabel1.Location = new System.Drawing.Point(5, 21);
             this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(59, 18);
+            this.radLabel1.Size = new System.Drawing.Size(33, 18);
             this.radLabel1.TabIndex = 0;
-            this.radLabel1.Text = "Unit Code";
+            this.radLabel1.Text = "Code";
             // 
             // RdTbpList
             // 
@@ -228,29 +301,29 @@
             this.RdGrdClass.MasterTemplate.AllowSearchRow = true;
             this.RdGrdClass.MasterTemplate.AutoGenerateColumns = false;
             this.RdGrdClass.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "cItemCategoryCode";
-            gridViewTextBoxColumn2.HeaderText = "Item Category Code";
-            gridViewTextBoxColumn2.Name = "cItemCategoryCode";
-            gridViewTextBoxColumn2.Width = 256;
-            gridViewDateTimeColumn2.EnableExpressionEditor = false;
-            gridViewDateTimeColumn2.FieldName = "cItemCategoryDesc";
-            gridViewDateTimeColumn2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            gridViewDateTimeColumn2.HeaderText = "Item Category Description";
-            gridViewDateTimeColumn2.Name = "cItemCategoryDesc";
-            gridViewDateTimeColumn2.Width = 336;
-            gridViewCheckBoxColumn2.EnableExpressionEditor = false;
-            gridViewCheckBoxColumn2.FieldName = "lItemCategoryStatus";
-            gridViewCheckBoxColumn2.HeaderText = "Status";
-            gridViewCheckBoxColumn2.MinWidth = 20;
-            gridViewCheckBoxColumn2.Name = "lItemCategoryStatus";
-            gridViewCheckBoxColumn2.Width = 168;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.FieldName = "cItemCategoryCode";
+            gridViewTextBoxColumn5.HeaderText = "Item Category Code";
+            gridViewTextBoxColumn5.Name = "cItemCategoryCode";
+            gridViewTextBoxColumn5.Width = 256;
+            gridViewDateTimeColumn5.EnableExpressionEditor = false;
+            gridViewDateTimeColumn5.FieldName = "cItemCategoryDesc";
+            gridViewDateTimeColumn5.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            gridViewDateTimeColumn5.HeaderText = "Item Category Description";
+            gridViewDateTimeColumn5.Name = "cItemCategoryDesc";
+            gridViewDateTimeColumn5.Width = 336;
+            gridViewCheckBoxColumn5.EnableExpressionEditor = false;
+            gridViewCheckBoxColumn5.FieldName = "lItemCategoryStatus";
+            gridViewCheckBoxColumn5.HeaderText = "Status";
+            gridViewCheckBoxColumn5.MinWidth = 20;
+            gridViewCheckBoxColumn5.Name = "lItemCategoryStatus";
+            gridViewCheckBoxColumn5.Width = 168;
             this.RdGrdClass.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn2,
-            gridViewDateTimeColumn2,
-            gridViewCheckBoxColumn2});
+            gridViewTextBoxColumn5,
+            gridViewDateTimeColumn5,
+            gridViewCheckBoxColumn5});
             this.RdGrdClass.MasterTemplate.EnableFiltering = true;
-            this.RdGrdClass.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.RdGrdClass.MasterTemplate.ViewDefinition = tableViewDefinition5;
             this.RdGrdClass.Name = "RdGrdClass";
             this.RdGrdClass.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.RdGrdClass.Size = new System.Drawing.Size(779, 369);
@@ -311,8 +384,8 @@
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.TxtPositionItem;
             this.bindingNavigator1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1004, 25);
-            this.bindingNavigator1.TabIndex = 6;
+            this.bindingNavigator1.Size = new System.Drawing.Size(1156, 25);
+            this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
             // bindingNavigatorCountItem
@@ -460,12 +533,471 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
+            // RdTxtSuppID
+            // 
+            this.RdTxtSuppID.BackColor = System.Drawing.Color.White;
+            this.RdTxtSuppID.Location = new System.Drawing.Point(129, 71);
+            this.RdTxtSuppID.MaxLength = 200;
+            this.RdTxtSuppID.Name = "RdTxtSuppID";
+            this.RdTxtSuppID.NullText = "Supplier Compnay / Firms Bussine ID (Registration No / National ID)";
+            // 
+            // 
+            // 
+            this.RdTxtSuppID.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtSuppID.Size = new System.Drawing.Size(528, 20);
+            this.RdTxtSuppID.TabIndex = 2;
+            // 
+            // radLabel5
+            // 
+            this.radLabel5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel5.Location = new System.Drawing.Point(6, 73);
+            this.radLabel5.Name = "radLabel5";
+            this.radLabel5.Size = new System.Drawing.Size(119, 18);
+            this.radLabel5.TabIndex = 7;
+            this.radLabel5.Text = "ID (Bussine ID / E-ID)";
+            // 
+            // RdTxtSuppAddress
+            // 
+            this.RdTxtSuppAddress.BackColor = System.Drawing.Color.White;
+            this.RdTxtSuppAddress.Location = new System.Drawing.Point(129, 21);
+            this.RdTxtSuppAddress.MaxLength = 200;
+            this.RdTxtSuppAddress.Multiline = true;
+            this.RdTxtSuppAddress.Name = "RdTxtSuppAddress";
+            this.RdTxtSuppAddress.NullText = "Address";
+            // 
+            // 
+            // 
+            this.RdTxtSuppAddress.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtSuppAddress.Size = new System.Drawing.Size(528, 56);
+            this.RdTxtSuppAddress.TabIndex = 0;
+            // 
+            // radLabel6
+            // 
+            this.radLabel6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel6.Location = new System.Drawing.Point(6, 23);
+            this.radLabel6.Name = "radLabel6";
+            this.radLabel6.Size = new System.Drawing.Size(49, 18);
+            this.radLabel6.TabIndex = 9;
+            this.radLabel6.Text = "Address";
+            // 
+            // RdTxtSuppPhoneNo1
+            // 
+            this.RdTxtSuppPhoneNo1.BackColor = System.Drawing.Color.White;
+            this.RdTxtSuppPhoneNo1.Location = new System.Drawing.Point(129, 134);
+            this.RdTxtSuppPhoneNo1.MaxLength = 15;
+            this.RdTxtSuppPhoneNo1.Name = "RdTxtSuppPhoneNo1";
+            this.RdTxtSuppPhoneNo1.NullText = "Phone No -1 (+1-123456789)";
+            // 
+            // 
+            // 
+            this.RdTxtSuppPhoneNo1.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtSuppPhoneNo1.Size = new System.Drawing.Size(204, 20);
+            this.RdTxtSuppPhoneNo1.TabIndex = 5;
+            this.RdTxtSuppPhoneNo1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RdTxtSuppPhoneNo1_KeyPress);
+            // 
+            // radLabel7
+            // 
+            this.radLabel7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel7.Location = new System.Drawing.Point(6, 136);
+            this.radLabel7.Name = "radLabel7";
+            this.radLabel7.Size = new System.Drawing.Size(73, 18);
+            this.radLabel7.TabIndex = 11;
+            this.radLabel7.Text = "Phone No -1";
+            // 
+            // RdTxtSuppPhoneNo2
+            // 
+            this.RdTxtSuppPhoneNo2.BackColor = System.Drawing.Color.White;
+            this.RdTxtSuppPhoneNo2.Location = new System.Drawing.Point(427, 134);
+            this.RdTxtSuppPhoneNo2.MaxLength = 15;
+            this.RdTxtSuppPhoneNo2.Name = "RdTxtSuppPhoneNo2";
+            this.RdTxtSuppPhoneNo2.NullText = "Phone No -2 (+1-123456789)";
+            // 
+            // 
+            // 
+            this.RdTxtSuppPhoneNo2.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtSuppPhoneNo2.Size = new System.Drawing.Size(230, 20);
+            this.RdTxtSuppPhoneNo2.TabIndex = 6;
+            this.RdTxtSuppPhoneNo2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RdTxtSuppPhoneNo1_KeyPress);
+            // 
+            // radLabel8
+            // 
+            this.radLabel8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel8.Location = new System.Drawing.Point(334, 136);
+            this.radLabel8.Name = "radLabel8";
+            this.radLabel8.Size = new System.Drawing.Size(73, 18);
+            this.radLabel8.TabIndex = 13;
+            this.radLabel8.Text = "Phone No -2";
+            // 
+            // RdTxtSuppFaxNo
+            // 
+            this.RdTxtSuppFaxNo.BackColor = System.Drawing.Color.White;
+            this.RdTxtSuppFaxNo.Location = new System.Drawing.Point(129, 160);
+            this.RdTxtSuppFaxNo.MaxLength = 15;
+            this.RdTxtSuppFaxNo.Name = "RdTxtSuppFaxNo";
+            this.RdTxtSuppFaxNo.NullText = "Fax No (+1-123456789)";
+            // 
+            // 
+            // 
+            this.RdTxtSuppFaxNo.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtSuppFaxNo.Size = new System.Drawing.Size(204, 20);
+            this.RdTxtSuppFaxNo.TabIndex = 7;
+            this.RdTxtSuppFaxNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RdTxtSuppPhoneNo1_KeyPress);
+            // 
+            // radLabel9
+            // 
+            this.radLabel9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel9.Location = new System.Drawing.Point(6, 162);
+            this.radLabel9.Name = "radLabel9";
+            this.radLabel9.Size = new System.Drawing.Size(43, 18);
+            this.radLabel9.TabIndex = 15;
+            this.radLabel9.Text = "Fax No";
+            // 
+            // RdTxtSuppEmailID
+            // 
+            this.RdTxtSuppEmailID.BackColor = System.Drawing.Color.White;
+            this.RdTxtSuppEmailID.Location = new System.Drawing.Point(130, 186);
+            this.RdTxtSuppEmailID.MaxLength = 200;
+            this.RdTxtSuppEmailID.Name = "RdTxtSuppEmailID";
+            this.RdTxtSuppEmailID.NullText = "Email ID (example@example.com)";
+            // 
+            // 
+            // 
+            this.RdTxtSuppEmailID.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtSuppEmailID.Size = new System.Drawing.Size(527, 20);
+            this.RdTxtSuppEmailID.TabIndex = 8;
+            this.RdTxtSuppEmailID.Validating += new System.ComponentModel.CancelEventHandler(this.RdTxtSuppEmailID_Validating);
+            // 
+            // radLabel10
+            // 
+            this.radLabel10.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel10.Location = new System.Drawing.Point(7, 188);
+            this.radLabel10.Name = "radLabel10";
+            this.radLabel10.Size = new System.Drawing.Size(52, 18);
+            this.radLabel10.TabIndex = 17;
+            this.radLabel10.Text = "Email-ID";
+            // 
+            // RdTxtSuppWebSite
+            // 
+            this.RdTxtSuppWebSite.BackColor = System.Drawing.Color.White;
+            this.RdTxtSuppWebSite.Location = new System.Drawing.Point(130, 212);
+            this.RdTxtSuppWebSite.MaxLength = 200;
+            this.RdTxtSuppWebSite.Name = "RdTxtSuppWebSite";
+            this.RdTxtSuppWebSite.NullText = "Web Site (www.example.com)";
+            // 
+            // 
+            // 
+            this.RdTxtSuppWebSite.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtSuppWebSite.Size = new System.Drawing.Size(527, 20);
+            this.RdTxtSuppWebSite.TabIndex = 9;
+            this.RdTxtSuppWebSite.Validating += new System.ComponentModel.CancelEventHandler(this.RdTxtSuppWebSite_Validating);
+            // 
+            // radLabel11
+            // 
+            this.radLabel11.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel11.Location = new System.Drawing.Point(7, 214);
+            this.radLabel11.Name = "radLabel11";
+            this.radLabel11.Size = new System.Drawing.Size(54, 18);
+            this.radLabel11.TabIndex = 19;
+            this.radLabel11.Text = "Web Site";
+            // 
+            // radGroupBox1
+            // 
+            this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.radGroupBox1.Controls.Add(this.radLabel1);
+            this.radGroupBox1.Controls.Add(this.radLabel2);
+            this.radGroupBox1.Controls.Add(this.RdTxtSuppCode);
+            this.radGroupBox1.Controls.Add(this.RdTxtSuppName);
+            this.radGroupBox1.Controls.Add(this.radLabel5);
+            this.radGroupBox1.Controls.Add(this.RdTxtSuppID);
+            this.radGroupBox1.HeaderText = "Compnay / Firms Details";
+            this.radGroupBox1.Location = new System.Drawing.Point(3, 9);
+            this.radGroupBox1.Name = "radGroupBox1";
+            this.radGroupBox1.Size = new System.Drawing.Size(662, 105);
+            this.radGroupBox1.TabIndex = 0;
+            this.radGroupBox1.Text = "Compnay / Firms Details";
+            // 
+            // radGroupBox2
+            // 
+            this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox2.Controls.Add(this.RdTxtSuppPostalCode);
+            this.radGroupBox2.Controls.Add(this.radLabel19);
+            this.radGroupBox2.Controls.Add(this.RdTxtSuppState);
+            this.radGroupBox2.Controls.Add(this.RdTxtSuppCity);
+            this.radGroupBox2.Controls.Add(this.radLabel20);
+            this.radGroupBox2.Controls.Add(this.RdTxtSuppCountry);
+            this.radGroupBox2.Controls.Add(this.RdTxtSuppAddress);
+            this.radGroupBox2.Controls.Add(this.radLabel6);
+            this.radGroupBox2.Controls.Add(this.radLabel7);
+            this.radGroupBox2.Controls.Add(this.RdTxtSuppPhoneNo1);
+            this.radGroupBox2.Controls.Add(this.RdTxtSuppPhoneNo2);
+            this.radGroupBox2.Controls.Add(this.radLabel9);
+            this.radGroupBox2.Controls.Add(this.RdTxtSuppFaxNo);
+            this.radGroupBox2.Controls.Add(this.radLabel10);
+            this.radGroupBox2.Controls.Add(this.RdTxtSuppEmailID);
+            this.radGroupBox2.Controls.Add(this.radLabel11);
+            this.radGroupBox2.Controls.Add(this.RdTxtSuppWebSite);
+            this.radGroupBox2.Controls.Add(this.radLabel22);
+            this.radGroupBox2.Controls.Add(this.radLabel21);
+            this.radGroupBox2.Controls.Add(this.radLabel8);
+            this.radGroupBox2.HeaderText = "Compnay / Firms Contact Details";
+            this.radGroupBox2.Location = new System.Drawing.Point(3, 119);
+            this.radGroupBox2.Name = "radGroupBox2";
+            this.radGroupBox2.Size = new System.Drawing.Size(662, 243);
+            this.radGroupBox2.TabIndex = 1;
+            this.radGroupBox2.Text = "Compnay / Firms Contact Details";
+            // 
+            // radGroupBox3
+            // 
+            this.radGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox3.Controls.Add(this.radLabel12);
+            this.radGroupBox3.Controls.Add(this.RdTxtSuppContactPerson);
+            this.radGroupBox3.Controls.Add(this.radLabel13);
+            this.radGroupBox3.Controls.Add(this.RdTxtSuppContactPersonDesgination);
+            this.radGroupBox3.Controls.Add(this.radLabel14);
+            this.radGroupBox3.Controls.Add(this.RdTxtSuppContactPersonMobileNo);
+            this.radGroupBox3.Controls.Add(this.radLabel15);
+            this.radGroupBox3.Controls.Add(this.RdTxtSuppContactPersonPhoneNo);
+            this.radGroupBox3.Controls.Add(this.radLabel16);
+            this.radGroupBox3.Controls.Add(this.RdTxtSuppContactPersonEmailID);
+            this.radGroupBox3.HeaderText = "Compnay / Firms Contact Person";
+            this.radGroupBox3.Location = new System.Drawing.Point(3, 375);
+            this.radGroupBox3.Name = "radGroupBox3";
+            this.radGroupBox3.Size = new System.Drawing.Size(662, 151);
+            this.radGroupBox3.TabIndex = 2;
+            this.radGroupBox3.Text = "Compnay / Firms Contact Person";
+            // 
+            // radGroupBox4
+            // 
+            this.radGroupBox4.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox4.Controls.Add(this.RdTxtSuppRemarks);
+            this.radGroupBox4.Controls.Add(this.RdChkSuppStatus);
+            this.radGroupBox4.Controls.Add(this.radLabel3);
+            this.radGroupBox4.Controls.Add(this.radLabel4);
+            this.radGroupBox4.HeaderText = "Compnay / Firms Remarks & Status";
+            this.radGroupBox4.Location = new System.Drawing.Point(3, 532);
+            this.radGroupBox4.Name = "radGroupBox4";
+            this.radGroupBox4.Size = new System.Drawing.Size(662, 105);
+            this.radGroupBox4.TabIndex = 3;
+            this.radGroupBox4.Text = "Compnay / Firms Remarks & Status";
+            // 
+            // radLabel19
+            // 
+            this.radLabel19.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel19.Location = new System.Drawing.Point(6, 85);
+            this.radLabel19.Name = "radLabel19";
+            this.radLabel19.Size = new System.Drawing.Size(27, 18);
+            this.radLabel19.TabIndex = 21;
+            this.radLabel19.Text = "City";
+            // 
+            // RdTxtSuppCity
+            // 
+            this.RdTxtSuppCity.BackColor = System.Drawing.Color.White;
+            this.RdTxtSuppCity.Location = new System.Drawing.Point(129, 83);
+            this.RdTxtSuppCity.MaxLength = 200;
+            this.RdTxtSuppCity.Name = "RdTxtSuppCity";
+            this.RdTxtSuppCity.NullText = "City";
+            // 
+            // 
+            // 
+            this.RdTxtSuppCity.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtSuppCity.Size = new System.Drawing.Size(204, 20);
+            this.RdTxtSuppCity.TabIndex = 1;
+            // 
+            // radLabel20
+            // 
+            this.radLabel20.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel20.Location = new System.Drawing.Point(6, 111);
+            this.radLabel20.Name = "radLabel20";
+            this.radLabel20.Size = new System.Drawing.Size(49, 18);
+            this.radLabel20.TabIndex = 23;
+            this.radLabel20.Text = "Country";
+            // 
+            // RdTxtSuppCountry
+            // 
+            this.RdTxtSuppCountry.BackColor = System.Drawing.Color.White;
+            this.RdTxtSuppCountry.Location = new System.Drawing.Point(129, 109);
+            this.RdTxtSuppCountry.MaxLength = 200;
+            this.RdTxtSuppCountry.Name = "RdTxtSuppCountry";
+            this.RdTxtSuppCountry.NullText = "Country";
+            // 
+            // 
+            // 
+            this.RdTxtSuppCountry.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtSuppCountry.Size = new System.Drawing.Size(204, 20);
+            this.RdTxtSuppCountry.TabIndex = 3;
+            // 
+            // radLabel21
+            // 
+            this.radLabel21.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel21.Location = new System.Drawing.Point(334, 85);
+            this.radLabel21.Name = "radLabel21";
+            this.radLabel21.Size = new System.Drawing.Size(95, 18);
+            this.radLabel21.TabIndex = 23;
+            this.radLabel21.Text = "State / Provision";
+            // 
+            // RdTxtSuppState
+            // 
+            this.RdTxtSuppState.BackColor = System.Drawing.Color.White;
+            this.RdTxtSuppState.Location = new System.Drawing.Point(427, 83);
+            this.RdTxtSuppState.MaxLength = 200;
+            this.RdTxtSuppState.Name = "RdTxtSuppState";
+            this.RdTxtSuppState.NullText = "State / Provision";
+            // 
+            // 
+            // 
+            this.RdTxtSuppState.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtSuppState.Size = new System.Drawing.Size(230, 20);
+            this.RdTxtSuppState.TabIndex = 2;
+            // 
+            // radLabel22
+            // 
+            this.radLabel22.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel22.Location = new System.Drawing.Point(334, 110);
+            this.radLabel22.Name = "radLabel22";
+            this.radLabel22.Size = new System.Drawing.Size(69, 18);
+            this.radLabel22.TabIndex = 25;
+            this.radLabel22.Text = "Postal Code";
+            // 
+            // RdTxtSuppPostalCode
+            // 
+            this.RdTxtSuppPostalCode.BackColor = System.Drawing.Color.White;
+            this.RdTxtSuppPostalCode.Location = new System.Drawing.Point(427, 108);
+            this.RdTxtSuppPostalCode.MaxLength = 200;
+            this.RdTxtSuppPostalCode.Name = "RdTxtSuppPostalCode";
+            this.RdTxtSuppPostalCode.NullText = "Postal Code (000000)";
+            // 
+            // 
+            // 
+            this.RdTxtSuppPostalCode.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtSuppPostalCode.Size = new System.Drawing.Size(230, 20);
+            this.RdTxtSuppPostalCode.TabIndex = 4;
+            this.RdTxtSuppPostalCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RdTxtSuppPostalCode_KeyPress);
+            // 
+            // radLabel12
+            // 
+            this.radLabel12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel12.Location = new System.Drawing.Point(7, 36);
+            this.radLabel12.Name = "radLabel12";
+            this.radLabel12.Size = new System.Drawing.Size(38, 18);
+            this.radLabel12.TabIndex = 31;
+            this.radLabel12.Text = "Name";
+            // 
+            // RdTxtSuppContactPerson
+            // 
+            this.RdTxtSuppContactPerson.BackColor = System.Drawing.Color.White;
+            this.RdTxtSuppContactPerson.Location = new System.Drawing.Point(129, 34);
+            this.RdTxtSuppContactPerson.MaxLength = 200;
+            this.RdTxtSuppContactPerson.Name = "RdTxtSuppContactPerson";
+            this.RdTxtSuppContactPerson.NullText = "Contact Person Name";
+            // 
+            // 
+            // 
+            this.RdTxtSuppContactPerson.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtSuppContactPerson.Size = new System.Drawing.Size(528, 20);
+            this.RdTxtSuppContactPerson.TabIndex = 0;
+            // 
+            // radLabel13
+            // 
+            this.radLabel13.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel13.Location = new System.Drawing.Point(7, 62);
+            this.radLabel13.Name = "radLabel13";
+            this.radLabel13.Size = new System.Drawing.Size(70, 18);
+            this.radLabel13.TabIndex = 33;
+            this.radLabel13.Text = "Designation";
+            // 
+            // RdTxtSuppContactPersonDesgination
+            // 
+            this.RdTxtSuppContactPersonDesgination.BackColor = System.Drawing.Color.White;
+            this.RdTxtSuppContactPersonDesgination.Location = new System.Drawing.Point(129, 60);
+            this.RdTxtSuppContactPersonDesgination.MaxLength = 200;
+            this.RdTxtSuppContactPersonDesgination.Name = "RdTxtSuppContactPersonDesgination";
+            this.RdTxtSuppContactPersonDesgination.NullText = "Contact Person Designation";
+            // 
+            // 
+            // 
+            this.RdTxtSuppContactPersonDesgination.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtSuppContactPersonDesgination.Size = new System.Drawing.Size(528, 20);
+            this.RdTxtSuppContactPersonDesgination.TabIndex = 1;
+            // 
+            // radLabel14
+            // 
+            this.radLabel14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel14.Location = new System.Drawing.Point(7, 87);
+            this.radLabel14.Name = "radLabel14";
+            this.radLabel14.Size = new System.Drawing.Size(66, 18);
+            this.radLabel14.TabIndex = 25;
+            this.radLabel14.Text = "Mobile No.";
+            // 
+            // RdTxtSuppContactPersonMobileNo
+            // 
+            this.RdTxtSuppContactPersonMobileNo.BackColor = System.Drawing.Color.White;
+            this.RdTxtSuppContactPersonMobileNo.Location = new System.Drawing.Point(129, 85);
+            this.RdTxtSuppContactPersonMobileNo.MaxLength = 13;
+            this.RdTxtSuppContactPersonMobileNo.Name = "RdTxtSuppContactPersonMobileNo";
+            this.RdTxtSuppContactPersonMobileNo.NullText = "Contact Person Mobile (+1-123456789)";
+            // 
+            // 
+            // 
+            this.RdTxtSuppContactPersonMobileNo.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtSuppContactPersonMobileNo.Size = new System.Drawing.Size(205, 20);
+            this.RdTxtSuppContactPersonMobileNo.TabIndex = 2;
+            this.RdTxtSuppContactPersonMobileNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RdTxtSuppPhoneNo1_KeyPress);
+            // 
+            // radLabel15
+            // 
+            this.radLabel15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel15.Location = new System.Drawing.Point(336, 87);
+            this.radLabel15.Name = "radLabel15";
+            this.radLabel15.Size = new System.Drawing.Size(59, 18);
+            this.radLabel15.TabIndex = 27;
+            this.radLabel15.Text = "Phone No";
+            // 
+            // RdTxtSuppContactPersonPhoneNo
+            // 
+            this.RdTxtSuppContactPersonPhoneNo.BackColor = System.Drawing.Color.White;
+            this.RdTxtSuppContactPersonPhoneNo.Location = new System.Drawing.Point(431, 85);
+            this.RdTxtSuppContactPersonPhoneNo.MaxLength = 13;
+            this.RdTxtSuppContactPersonPhoneNo.Name = "RdTxtSuppContactPersonPhoneNo";
+            this.RdTxtSuppContactPersonPhoneNo.NullText = "Contact Person Phone No  (+1-123456789)";
+            // 
+            // 
+            // 
+            this.RdTxtSuppContactPersonPhoneNo.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtSuppContactPersonPhoneNo.Size = new System.Drawing.Size(226, 20);
+            this.RdTxtSuppContactPersonPhoneNo.TabIndex = 3;
+            this.RdTxtSuppContactPersonPhoneNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RdTxtSuppPhoneNo1_KeyPress);
+            // 
+            // radLabel16
+            // 
+            this.radLabel16.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabel16.Location = new System.Drawing.Point(7, 113);
+            this.radLabel16.Name = "radLabel16";
+            this.radLabel16.Size = new System.Drawing.Size(52, 18);
+            this.radLabel16.TabIndex = 29;
+            this.radLabel16.Text = "Email-ID";
+            // 
+            // RdTxtSuppContactPersonEmailID
+            // 
+            this.RdTxtSuppContactPersonEmailID.BackColor = System.Drawing.Color.White;
+            this.RdTxtSuppContactPersonEmailID.Location = new System.Drawing.Point(129, 111);
+            this.RdTxtSuppContactPersonEmailID.MaxLength = 200;
+            this.RdTxtSuppContactPersonEmailID.Name = "RdTxtSuppContactPersonEmailID";
+            this.RdTxtSuppContactPersonEmailID.NullText = "Contact Person Email ID (example@example.com)";
+            // 
+            // 
+            // 
+            this.RdTxtSuppContactPersonEmailID.RootElement.UseDefaultDisabledPaint = false;
+            this.RdTxtSuppContactPersonEmailID.Size = new System.Drawing.Size(529, 20);
+            this.RdTxtSuppContactPersonEmailID.TabIndex = 4;
+            this.RdTxtSuppContactPersonEmailID.Validating += new System.ComponentModel.CancelEventHandler(this.RdTxtSuppEmailID_Validating);
+            // 
             // FrmSupplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1004, 610);
+            this.ClientSize = new System.Drawing.Size(1156, 756);
             this.Controls.Add(this.RdPageViewMain);
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "FrmSupplier";
@@ -473,19 +1005,18 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
-            this.Text = "FrmSupplier";
+            this.Text = "Supplier";
             this.Load += new System.EventHandler(this.FrmSupplier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.RdPageViewMain)).EndInit();
             this.RdPageViewMain.ResumeLayout(false);
             this.RdTbpEntry.ResumeLayout(false);
-            this.RdTbpEntry.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RdTxtUnitRemarks)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RdTxtUnitDescription)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RdTxtUnitCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppRemarks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RdChkClassStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdChkSuppStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             this.RdTbpList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.RdGrdClass.MasterTemplate)).EndInit();
@@ -493,6 +1024,50 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppAddress)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppPhoneNo1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppPhoneNo2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppFaxNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppEmailID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppWebSite)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
+            this.radGroupBox1.ResumeLayout(false);
+            this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
+            this.radGroupBox2.ResumeLayout(false);
+            this.radGroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).EndInit();
+            this.radGroupBox3.ResumeLayout(false);
+            this.radGroupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox4)).EndInit();
+            this.radGroupBox4.ResumeLayout(false);
+            this.radGroupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppCity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppCountry)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppState)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppPostalCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppContactPerson)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppContactPersonDesgination)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppContactPersonMobileNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppContactPersonPhoneNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RdTxtSuppContactPersonEmailID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -503,13 +1078,13 @@
 
         private Telerik.WinControls.UI.RadPageView RdPageViewMain;
         private Telerik.WinControls.UI.RadPageViewPage RdTbpEntry;
-        private Telerik.WinControls.UI.RadTextBoxControl RdTxtUnitRemarks;
-        private Telerik.WinControls.UI.RadTextBoxControl RdTxtUnitDescription;
-        private Telerik.WinControls.UI.RadTextBoxControl RdTxtUnitCode;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSuppRemarks;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSuppName;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSuppCode;
         private Telerik.WinControls.UI.RadLabel radLabel4;
         private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.UI.RadLabel radLabel2;
-        private Telerik.WinControls.UI.RadCheckBox RdChkClassStatus;
+        private Telerik.WinControls.UI.RadCheckBox RdChkSuppStatus;
         private Telerik.WinControls.UI.RadLabel radLabel1;
         private Telerik.WinControls.UI.RadPageViewPage RdTbpList;
         private Telerik.WinControls.UI.RadGridView RdGrdClass;
@@ -534,5 +1109,41 @@
         private System.Windows.Forms.ToolStripButton BtnExport;
         private System.Windows.Forms.ToolStripButton BtnClose;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private Telerik.WinControls.UI.RadGroupBox radGroupBox4;
+        private Telerik.WinControls.UI.RadGroupBox radGroupBox3;
+        private Telerik.WinControls.UI.RadGroupBox radGroupBox2;
+        private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
+        private Telerik.WinControls.UI.RadLabel radLabel5;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSuppID;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSuppWebSite;
+        private Telerik.WinControls.UI.RadLabel radLabel11;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSuppEmailID;
+        private Telerik.WinControls.UI.RadLabel radLabel10;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSuppFaxNo;
+        private Telerik.WinControls.UI.RadLabel radLabel9;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSuppPhoneNo2;
+        private Telerik.WinControls.UI.RadLabel radLabel8;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSuppPhoneNo1;
+        private Telerik.WinControls.UI.RadLabel radLabel7;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSuppAddress;
+        private Telerik.WinControls.UI.RadLabel radLabel6;
+        private Telerik.WinControls.UI.RadLabel radLabel22;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSuppPostalCode;
+        private Telerik.WinControls.UI.RadLabel radLabel21;
+        private Telerik.WinControls.UI.RadLabel radLabel19;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSuppState;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSuppCity;
+        private Telerik.WinControls.UI.RadLabel radLabel20;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSuppCountry;
+        private Telerik.WinControls.UI.RadLabel radLabel12;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSuppContactPerson;
+        private Telerik.WinControls.UI.RadLabel radLabel13;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSuppContactPersonDesgination;
+        private Telerik.WinControls.UI.RadLabel radLabel14;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSuppContactPersonMobileNo;
+        private Telerik.WinControls.UI.RadLabel radLabel15;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSuppContactPersonPhoneNo;
+        private Telerik.WinControls.UI.RadLabel radLabel16;
+        private Telerik.WinControls.UI.RadTextBoxControl RdTxtSuppContactPersonEmailID;
     }
 }
